@@ -1,0 +1,42 @@
+/* Banana Ani*/
+#bananaAni{
+  text-align:center;
+  color:#ff0000;
+  flex:1;
+  z-index: -1;
+}
+
+#bananaAni h1{
+  font-weight:bold
+}
+
+#bananaAni .banana{
+  z-index: -1;
+  position: absolute;
+}
+
+#bananaAni img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  z-index: -1;
+    
+  animation: rotate 6s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotate {
+  from{
+    transform: rotate(0deg);
+  }
+
+  to{
+    transform: rotate(360deg);
+  }
+}
+

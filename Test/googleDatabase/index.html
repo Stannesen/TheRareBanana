@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+
+        <link rel="stylesheet" href="../css/global.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="top">
+                    <div id="branding">
+                        <h1><span class="highlight">The Rare Banana</span></h1>
+                        <nav>
+                            <ul>
+                                <li><a href="../index.html">Home</a></li>
+                                <li><a href="../about.html">About</a></li>
+                                <li><a href="../login/login.php">Login</a></li>
+                                <li class="current"><a href="index.html">Clock</a></li>
+                                <li><a href="../weeklySchedule.php">Weekly Schedule</a></li>
+                                <li><a href="../Solitaire/index.html">Solitaire</a></li>              
+
+                            </ul>
+                        </nav>
+                    </div>
+                </div>   
+            </div>
+        </header>
+
+        <div id="main">
+            <h1 id="text"></h1>
+            <button id="addButton" onclick="Add()">Add</button>
+            <button id="getButton" onclick="Get()">Get</button>
+            <input type="text" id="inputText">
+            
+        </div>
+        
+        
+        
+
+        
+        <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+        <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyD-6MCMlkQCbJOhJsdSrEtWv-uufLZN7do",
+            authDomain: "test01-7627c.firebaseapp.com",
+            databaseURL: "https://test01-7627c.firebaseio.com",
+            projectId: "test01-7627c",
+            storageBucket: "test01-7627c.appspot.com",
+            messagingSenderId: "879572972824"
+        };
+        firebase.initializeApp(config);
+
+            var text = document.getElementById("text");
+            var databaseRef = firebase.database().ref().child("text");
+            var inputText = document.getElementById("inputText");
+            
+        function Add(){
+            var setText = inputText.value;
+            databaseRef.set(setText);
+        }
+
+        function Get(){
+            databaseRef.on('value', snap => text.innerHTML = snap.val());
+        }
+
+        </script>
+
+
+    </body>
+</html>
