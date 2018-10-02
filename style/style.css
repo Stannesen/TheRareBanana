@@ -1,0 +1,16 @@
+header a{
+    font-family: "Times New Roman", Times, serif;
+    font-style: normal;
+    text-transform: uppercase;
+    color: black;
+    display: inline-block;
+    text-decoration: unset;
+}
+
+header a:hover {
+    color: hotpink;
+}
+
+header li{
+    background-color: lightblue;
+}
