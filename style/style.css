@@ -29,9 +29,24 @@ header li a{
 }
 
 
+.nav{
+    width: 100%;
+}
+
+.cnt {
+    position: relative;
+    display: inline-block;
+    width: 972px;
+    background-color: azure;
+    margin: 0 auto;
+    font-weight: bold;
+    font-family: 'ars-maquette-web','proxima-nova',sans-serif;
+}
+
+/** Dropdown */ 
 
 
-.dropbtn {
+.menuBtn {
     background-color: #14b3e4;
     color: white;
     padding: 8px;
@@ -39,10 +54,7 @@ header li a{
     border: none;
 }
 
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
+
 
 .dropdown-content {
     display: none;
@@ -63,10 +75,10 @@ header li a{
 .dropdown-content a:hover {
     background-color: #ddd;
 }
-.dropdown:hover .dropdown-content {
+.cnt:hover .dropdown-content {
     display: block;
 }
-.dropdown:hover .dropbtn {
+.cnt:hover .menuBtn {
     background-color: #3e8e41;
 }
 
