@@ -23,13 +23,13 @@ header h1{
 header li{
     background-color: lightblue;
     list-style-type: none;
-    display: inline-block;
-    height: 100%;
-
+    display: flex;
 }
 
 header li a{
     margin-left: 10px;
+    align-self: center;
+    display: block;
 }
 
 /** Header Naviiation Bar*/
@@ -38,7 +38,7 @@ header .nav{
     
     background-color: honeydew;
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
 }
 
@@ -93,7 +93,8 @@ header .cnt:hover .menuBtn {
 
 /** Header Nav List */
 header .nav ul{
-    display: inline-block;
+    display: flex;
     padding: 0;
     margin: 0;
+    
 }
