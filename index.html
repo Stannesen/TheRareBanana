@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="Css/global.css">
+    <link rel="stylesheet" href="Css/clock.css">
     <title>Home</title>
 </head>
 <body>
@@ -16,14 +17,13 @@
                     <button class="menuBtn">Menu</button>
                     <div class="dropdown-content">
                         <a href="index.html">Home</a>
-                        <a href="index.html">About</a>
+                        <a href="about.html">About</a>
                     </div>
                 </div>
             </div>
             <ul>
-                <li><a class="current"href="index.html">Home</a></li><li>
-                    <a href="index.html">About</a></li><li>
-                    <a href="index.html">Login</a></li>
+                <li><a href="index.html">Home</a></li><li>
+                    <a class="current" href="about.html">About</a></li><li>
             
             </ul>
     
@@ -31,5 +31,23 @@
         </div>
         
     </header>
+
+    <div class="clock">
+        <div>
+            <canvas id="clock" width="50" height="50">
+                If you can see this message, your browser does not support canvas 
+                and needs an update. Sorry. :(
+            </canvas>
+        </div>
+        
+    </div>
+    <div class="info">
+        <!--<image src="../img/Week/21.png" id="schedule"></image>-->
+        <h1>Current Time</h1>
+        <p id="digitalText">Hey</p>
+    </div>S
+
+    <script src = Scripts/clock.js>    
+    </script>
 </body>
 </html>

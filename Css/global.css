@@ -2,6 +2,10 @@ body{
     margin: 0;
 }
 
+body .construction{
+    text-transform: uppercase;
+}
+
 /** Header */
 header a{
     font-family: "Times New Roman", Times, serif;
@@ -28,6 +32,7 @@ header li{
 
 header li a{
     margin-left: 10px;
+    margin-right: 10px;
     align-self: center;
     display: block;
 }

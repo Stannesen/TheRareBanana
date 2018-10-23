@@ -1,0 +1,29 @@
+canvas#clock {
+    padding: 0px;
+    width: 20%;
+}
+
+.clock{
+    margin-top: 200px;
+    flex:0;
+   
+}
+
+.info{
+    background-color: #d1d1d1d0;
+    margin: 0 auto;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.info p, .info h1{
+    font-size: 50px;
+    margin: 0;
+    color: red;
+}
+
+footer{
+    background-color: blue;
+}
+
