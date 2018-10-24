@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', startTimer);
 
-//--- Starting the loop -- //
+//--- Starting the loop ---//
 function startTimer() {
      setInterval(displayTime, 10);
      displayTime();
@@ -44,15 +44,15 @@ function displayTime() {
     }
 
     
-    // Setting the width and height off canvas
+    //--- Setting the width and height off canvas ---//
     canvas.width = clockScale;
     canvas.height = clockScale;
     
-    // Make sure the clock is centered in the canvas
+    //--- Make sure the clock is centered in the canvas ---//
     var clockX = canvas.width / 2;
     var clockY = canvas.height / 2;
     
-    // Make sure TAU is defined (it's not by default)
+    //--- Make sure TAU is defined (it's not by default) ---//
     Math.TAU = 2 * Math.PI;
 
     context.clearRect(0, 0, canvas.width, canvas.height);
@@ -171,7 +171,6 @@ function displayTime() {
                 numY = 40;
                 break;
         }
-        //var numberPosX = Math.TAU / 12;
         var numberPosX = r * Math.cos(((Math.TAU / 12) * i) - (Math.PI/2));
         var numberPosY = r * Math.sin(((Math.TAU / 12) * i) - (Math.PI/2));
         context.fillText(i, ((numberPosX)+clockX) + numX, ((numberPosY) + clockY) + numY);

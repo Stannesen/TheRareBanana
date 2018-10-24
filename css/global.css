@@ -4,6 +4,9 @@ body{
 
 body .construction{
     text-transform: uppercase;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
 }
 
 /** Header */
@@ -40,16 +43,24 @@ header li a{
 /** Header Naviiation Bar*/
 
 header .nav{
-    
     background-color: hotpink;
     display: flex;
     align-items: stretch;
     justify-content: center;
 }
 
+header .navCnt{
+    background-color: blue;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    width: 70%;
+}
+
 /** Header Mouseover Dropdown */
 header .dropNav{
     display: inline-block;
+    margin-left: 30px;
 }
 
 header .dropNav .cnt {
@@ -99,7 +110,7 @@ header .cnt:hover .menuBtn {
 /** Header Nav List */
 header .nav ul{
     display: flex;
-    padding: 0;
+    padding: 0; 
     margin: 0;
     
 }
