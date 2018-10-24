@@ -4,50 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="Css/global.css">
-    <link rel="stylesheet" href="Css/clock.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/home.css">
     <title>Home</title>
 </head>
 <body>
     <header>
         <h1>The Rare Banana</h1>
         <div class="nav">
-            <div class="dropNav">
-                <div class="cnt">
-                    <button class="menuBtn">Menu</button>
-                    <div class="dropdown-content">
-                        <a href="index.html">Home</a>
-                        <a href="about.html">About</a>
+            <div class="navCnt">
+                <div class="dropNav">
+                    <div class="cnt">
+                        <button class="menuBtn">Menu</button>
+                        <div class="dropdown-content">
+                            <a href="index.html">Home</a>
+                            <a href="about.html">About</a>
+                            <a href="clock.html">Clock</a>
+                        </div>
                     </div>
                 </div>
+                <ul>
+                    <li><a href="index.html">Home</a></li><li>
+                        <a class="current" href="about.html">About</a></li><li>
+                </ul>
             </div>
-            <ul>
-                <li><a href="index.html">Home</a></li><li>
-                    <a class="current" href="about.html">About</a></li><li>
-            
-            </ul>
-    
-            
         </div>
-        
     </header>
 
-    <div class="clock">
-        <div>
-            <canvas id="clock" width="50" height="50">
-                If you can see this message, your browser does not support canvas 
-                and needs an update. Sorry. :(
-            </canvas>
-        </div>
-        
+    <div class="main">
+        <h1>Games</h1>
     </div>
-    <div class="info">
-        <!--<image src="../img/Week/21.png" id="schedule"></image>-->
-        <h1>Current Time</h1>
-        <p id="digitalText">Hey</p>
-    </div>S
-
-    <script src = Scripts/clock.js>    
-    </script>
 </body>
 </html>
