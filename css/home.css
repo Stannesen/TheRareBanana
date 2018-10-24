@@ -1,0 +1,23 @@
+body .background{
+    
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    z-index: 1;
+    background-image: url("../img/redDeadRedemtion2.jpg");
+    background-size: cover;
+}
+
+body .main{
+    display: inline-block;
+    background-color: blueviolet;
+    width: 80%;
+    height: 600px;
+}
+
+footer .footerText{
+    background-color: brown;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+}
