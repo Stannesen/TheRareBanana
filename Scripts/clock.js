@@ -22,6 +22,16 @@ function displayTime() {
     var digitalClock = document.getElementById("digitalText");
     digitalClock.font = "130px Arial";
     digitalClock.style.color = "red";
+    if(s < 10){
+        s = "0" + s;
+    }
+
+    if(h < 10){
+        h = "0" + h;
+    }
+    if(m < 10){
+        m = "0" + m;
+    }
     digitalClock.innerHTML = h + " : " + m + " : " + s;
 
     var houreThinkness = 10;

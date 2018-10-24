@@ -1,12 +1,13 @@
 canvas#clock {
     padding: 0px;
-    width: 20%;
 }
 
 .clock{
-    margin-top: 200px;
     flex:0;
-   
+    align-items: stretch;
+    justify-content: center;
+    display: flex;
+
 }
 
 .info{
@@ -15,6 +16,10 @@ canvas#clock {
     display: flex;
     align-items: stretch;
     justify-content: center;
+}
+
+.info p{
+    padding-left: 20px;
 }
 
 .info p, .info h1{
