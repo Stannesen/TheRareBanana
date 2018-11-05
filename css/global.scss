@@ -1,0 +1,120 @@
+body{
+    margin: 0;
+    .construction{
+        text-transform: uppercase;
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+    }
+}
+
+/** Header */
+header{ 
+    a{
+        font-family: "Times New Roman", Times, serif;
+        font-style: normal;
+        text-transform: uppercase;
+        color: black;
+        display: inline-block;
+        text-decoration: unset;
+
+        &:hover {
+            color: hotpink;
+        }
+    }
+
+    h1{
+        margin-left: 10px;
+    }
+
+    li{
+        background-color: lightblue;
+        list-style-type: none;
+        display: flex;
+
+        a{
+            margin-left: 10px;
+            margin-right: 10px;
+            align-self: center;
+            display: block;
+        }
+    }
+
+}
+
+
+.nav {
+    background-color: blue;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+
+    ul{
+        display: flex;
+        padding: 0; 
+        margin: 0;
+        flex: 1;
+        justify-content: center;
+        margin-left: -56px;
+        
+    }
+}
+
+.nav__cnt{
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    width: 80%;
+}
+
+.dropdown-nav{
+    display: inline-block;
+    margin-left: 30px;
+
+    &__cnt {
+        position: relative;
+        display: inline-block;
+        background-color: azure;
+        margin: 0 auto;
+        font-weight: bold;
+        font-family: 'ars-maquette-web','proxima-nova',sans-serif;
+    }
+
+    &__button {
+        background-color: #14b3e4;
+        color: white;
+        padding: 8px;
+        font-size: 16px;
+        border: none;
+
+        &:hover{
+            background-color: hotpink;
+        }
+    }
+}
+
+.dropdown-nav__cnt:hover .dropdown-nav__menu {
+    display: block;
+}
+        
+.dropdown-nav__menu {
+    display: none;
+    position: absolute;
+    background-color: #ffcece;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+
+    a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+
+        &:hover {
+            background-color: #ddd;
+        }
+    }
+}
+
+
