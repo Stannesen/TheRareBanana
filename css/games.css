@@ -16,12 +16,6 @@ body .background {
     align-items: stretch;
     justify-content: left; }
 
-footer .footerText {
-  background-color: brown;
-  display: flex;
-  align-items: stretch;
-  justify-content: center; }
-
 .grid-container {
   display: block;
   grid-template-columns: auto auto auto;
