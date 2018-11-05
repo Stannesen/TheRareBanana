@@ -25,10 +25,13 @@
 
     <div class="main">
         <div class="image-changing">
-            <button class="arrow--right" id="right-button" onclick="rightClick()">&larr;</button>
-            <img class="logo__image logo__image--current" src="img/the-rare-banana-logo-test-I.png">
-            <img class="logo__image" src="img/the-rare-banana-logo-test-II.png">
-            <button class="arrow--left" id="left-button" onclick="leftClick()">&rarr;</button>
+            <button class="arrow--right" id="right-button" onclick="showImage(1)">&larr;</button>
+            <div>
+                <img class="logo__image logo__image--current" src="img/the-rare-banana-logo-test-I.png">
+                <img class="logo__image" src="img/the-rare-banana-logo-test-II.png">
+                <img class="logo__image" src="img/the-rare-banana-logo-test-III.png">
+            </div>
+            <button class="arrow--left" id="left-button" onclick="showImage(-1)">&rarr;</button>
         </div>
     </div>
 

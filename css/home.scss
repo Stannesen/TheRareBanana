@@ -10,9 +10,9 @@
 
 .logo__image{
     background-color: hotpink;
-
+    display: none;
     &--current{
         background-color: blue;
-        display: none;
+        display: block;
     }
 }
