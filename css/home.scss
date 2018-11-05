@@ -1,0 +1,18 @@
+.image-changing{
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    
+    .img{
+        width: 80%;
+    }
+}
+
+.logo__image{
+    background-color: hotpink;
+
+    &--current{
+        background-color: blue;
+        display: none;
+    }
+}

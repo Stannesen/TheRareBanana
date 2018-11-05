@@ -15,18 +15,28 @@
             <div class="nav__cnt">
                 <ul>
                     <li><a href="index.html">Home</a></li><li>
-                        <a class="current" href="about.html">About</a>
-                        <a class="dropdown-nav__menu-item" href="games.html">Games</a></li><li>
+                        <a class="" href="about.html">About</a>
+                        <a class="" href="games.html">Games</a>
+                        <a class="" href="clock.html">clock</a></li><li>
                 </ul>
             </div>
         </div>
     </header>
-    <img src="img/the-rare-banana-logo-test-I.png">
-    
+
+    <div class="main">
+        <div class="image-changing">
+            <button class="arrow--right" id="right-button" onclick="rightClick()">&larr;</button>
+            <img class="logo__image logo__image--current" src="img/the-rare-banana-logo-test-I.png">
+            <img class="logo__image" src="img/the-rare-banana-logo-test-II.png">
+            <button class="arrow--left" id="left-button" onclick="leftClick()">&rarr;</button>
+        </div>
+    </div>
+
     <footer>
         <div class="footerText">
             <h1>This is a footer</h1>
         </div>
-    </footer>    
+    </footer>   
+    <script src="scripts/home.js"></script> 
 </body>
 </html>
