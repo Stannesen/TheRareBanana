@@ -11,7 +11,7 @@ toggleInterval();
 detectswipe("imgHolder", myfunction);
 
 
-function showImage(direction){
+function changeImage(direction){
     currentIdx = Math.max(0, Math.min(max, currentIdx + direction));
     if(currentIdx == lastIdx){
        if(currentIdx == max){
@@ -20,7 +20,6 @@ function showImage(direction){
             currentIdx = max;
        }
     }
-
     lastIdx = currentIdx;
     galleryImage.forEach((img, idx) => {
         img.classList.toggle("logo__image--current", currentIdx == idx);
@@ -30,7 +29,7 @@ function showImage(direction){
 
 function toggleInterval(){
     if(!intervalAni){
-        intervalAni = setInterval(loopImage, 5000);
+        intervalAni = setInterval(() => { changeImage(1) }, 5000);
         pausePlayAniImg.src = "img/pause-button.png";
     }else{
         window.clearInterval(intervalAni);
@@ -40,14 +39,13 @@ function toggleInterval(){
 }
 
 function resetInterval(){
-    window.clearInterval(intervalAni);
-    intervalAni = null;
-    toggleInterval();
-}
-
-
-function loopImage(){
-    showImage(1);
+    if(intervalAni == null){
+        
+    }else{
+        window.clearInterval(intervalAni);
+        intervalAni = null;
+        toggleInterval();
+    }
 }
 
 
@@ -95,10 +93,10 @@ function detectswipe(el,func) {
     //alert("you swiped on element with id '"+el+"' to "+d+" direction");
 
     if(d == "l"){
-        showImage(-1);
+        changeImage(-1);
         resetInterval();
     }else if(d == "r"){
-        showImage(1);
+        changeImage(1);
         resetInterval();
     }
   }
