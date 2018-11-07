@@ -1,27 +1,18 @@
-var rightButton = document.getElementById("right-button");
-var leftButton = document.getElementById("left-button");
-
-
-function rightClick(){
-    moveLeft();
-    //alert("Left");
-}
-
-function leftClick(){
-    moveLeft();
-    //alert("right");
-}
-
-
-var currentIdx = 0;
+var pausePlayAniImg = document.getElementById("pausePlayAniImg");
 const galleryImage = document.querySelectorAll(".logo__image");
+
 var max = galleryImage.length - 1;
 var lastIdx = 0;
+var currentIdx = 0;
+
+var intervalAni;
+
+toggleInterval();
+
 
 function showImage(direction){
     currentIdx = Math.max(0, Math.min(max, currentIdx + direction));
     if(currentIdx == lastIdx){
-        //console.log("current index same number");
        if(currentIdx == max){
             currentIdx = 0;
        }else if(currentIdx == 0){
@@ -30,37 +21,24 @@ function showImage(direction){
     }
 
     lastIdx = currentIdx;
-    //console.log(max);
-    //console.log(currentIdx);
     galleryImage.forEach((img, idx) => {
         img.classList.toggle("logo__image--current", currentIdx == idx);
     });
 }
-var interval = true;
 
-startInterval();
 
-function startInterval(){
-    if(interval == true){
-        var myVar = setInterval(loopImage, 5000);
-        console.log("interval = " + interval)
+function toggleInterval(){
+    if(!intervalAni){
+        intervalAni = setInterval(loopImage, 5000);
+        pausePlayAniImg.src = "img/pause-button.png";
     }else{
-        clearInterval(myVar);
+        window.clearInterval(intervalAni);
+        intervalAni = null;
+        pausePlayAniImg.src = "img/play-button.png";
     }
 }
 
 
 function loopImage(){
     showImage(1);
-}
-
-function toggleLoop(){
-    if(interval == true){
-        interval != interval;
-        console.log(interval);
-        startInterval
-    }else{
-        interval != interval;
-        startInterval();
-    }
 }

@@ -51,8 +51,8 @@
 .pause-button {
   position: absolute;
   border-style: none;
-  background-color: transparent;
-  width: 100px;
+  min-width: 4vw;
+  max-width: 5vw;
   align-self: flex-end;
   display: none;
   background-color: rgba(0, 0, 0, 0.425); }
