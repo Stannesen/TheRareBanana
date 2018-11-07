@@ -36,45 +36,31 @@ function showImage(direction){
         img.classList.toggle("logo__image--current", currentIdx == idx);
     });
 }
+var interval = true;
 
-/*
-function moveLeft(){
-    //alert("Function start");
-    var img = document.getElementsByClassName("logo__image");
-    var nextImage;
-    for(var i = 0; i < img.length; i++){
-        if(img[i].classList.contains("logo__image--current")){
-            nextImage = i;
-            img[i].classList.remove("logo__image--current");
-        }
-        
+startInterval();
+
+function startInterval(){
+    if(interval == true){
+        var myVar = setInterval(loopImage, 5000);
+        console.log("interval = " + interval)
+    }else{
+        clearInterval(myVar);
     }
-    nextImage = nextImage + 1;
-    if(nextImage > img.length-1){
-        nextImage = 0;
-    }
-    img[nextImage].classList.add("logo__image--current");
-    console.log(nextImage);
 }
 
-function moveRight(){
-    //alert("Function start");
-    var img = document.getElementsByClassName("logo__image");
-    var nextImage;
-    for(var i = 0; i < img.length; i++){
-        if(img[i].classList.contains("logo__image--current")){
-            nextImage = i;
-            img[i].classList.remove("logo__image--current");
-        }
-        
-    }
-    nextImage = nextImage - 1;
-    if(nextImage <= img.length){
-        nextImage = img.length-1;
-        //console.log("chaning to max " next);
-    }
-    img[nextImage].classList.add("logo__image--current");
-    console.log(nextImage);
+
+function loopImage(){
+    showImage(1);
 }
 
-*/
+function toggleLoop(){
+    if(interval == true){
+        interval != interval;
+        console.log(interval);
+        startInterval
+    }else{
+        interval != interval;
+        startInterval();
+    }
+}

@@ -1,15 +1,65 @@
 .image-changing {
   display: flex;
-  align-items: stretch;
-  justify-content: center; }
-  .image-changing .img {
-    width: 80%; }
+  align-items: center;
+  justify-content: center;
+  position: relative; }
+  .image-changing:hover .arrow__holder {
+    display: flex; }
+  .image-changing:hover .pause-button {
+    display: block; }
 
 .logo__image {
   background-color: hotpink;
-  display: none; }
+  display: none;
+  width: 100%; }
   .logo__image--current {
     background-color: blue;
-    display: block; }
+    display: block;
+    border-style: solid;
+    border-width: 5px;
+    border-color: hotpink;
+    box-sizing: border-box; }
+
+.main {
+  display: flex;
+  align-items: stretch;
+  justify-content: center; }
+
+.arrow__holder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.425);
+  display: none;
+  border-style: none; }
+  .arrow__holder:hover {
+    cursor: pointer; }
+  .arrow__holder--left {
+    left: 0; }
+  .arrow__holder--right {
+    right: 0; }
+.arrow__item {
+  width: 5vw;
+  height: 5vw; }
+  .arrow__item--left {
+    transform: scaleX(-1); }
+  .arrow__item--right {
+    transform: scaleX(1); }
+
+.pause-button {
+  position: absolute;
+  border-style: none;
+  background-color: transparent;
+  width: 100px;
+  align-self: flex-end;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.425); }
+  .pause-button__img {
+    height: 100%;
+    width: 100%; }
+  .pause-button:hover {
+    cursor: pointer; }
 
 /*# sourceMappingURL=home.css.map */

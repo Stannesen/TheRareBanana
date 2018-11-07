@@ -16,6 +16,9 @@ body .background {
     align-items: stretch;
     justify-content: left; }
 
+.test {
+  color: red; }
+
 .grid-container {
   display: block;
   grid-template-columns: auto auto auto;

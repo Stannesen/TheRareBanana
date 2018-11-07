@@ -1,0 +1,87 @@
+.image-changing{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    &:hover .arrow__holder{
+        display: flex;
+    }
+
+    &:hover .pause-button{
+        display: block;
+    }
+}
+
+.logo__image{
+    background-color: hotpink;
+    display: none;
+    width: 100%;
+
+    &--current{
+        background-color: blue;
+        display: block;
+        border-style: solid;
+        border-width: 5px;
+        border-color: hotpink;
+        box-sizing: border-box;
+    }
+}
+
+.main{
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.arrow{
+    &__holder{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.425);
+        display:none;
+        border-style: none;
+        &:hover {
+            cursor: pointer;
+        }
+        &--left{
+            left: 0;
+        }
+
+        &--right{
+            right: 0;
+        }
+    }
+
+    &__item{
+        width: 5vw;
+        height: 5vw;
+        &--left{
+            transform: scaleX(-1);
+        }
+        &--right{
+            transform: scaleX(1);
+        }
+    }
+}
+
+.pause-button{
+    position: absolute;
+    border-style: none;
+    background-color: transparent;
+    //height: 100px;
+    width: 100px;
+    align-self: flex-end;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.425);
+    
+    &__img{
+        height: 100%;
+        width: 100%;
+    }
+    &:hover {
+        cursor: pointer;
+    }
+}

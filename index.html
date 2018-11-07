@@ -15,7 +15,7 @@
             <div class="nav__cnt">
                 <ul>
                     <li><a href="index.html">Home</a></li><li>
-                        <a class="" href="about.html">About</a>
+                        <a class="" href="about.html">about</a>
                         <a class="" href="games.html">Games</a>
                         <a class="" href="clock.html">clock</a></li><li>
                 </ul>
@@ -25,13 +25,23 @@
 
     <div class="main">
         <div class="image-changing">
-            <button class="arrow--right" id="right-button" onclick="showImage(1)">&larr;</button>
-            <div>
+            <button class="arrow__holder arrow__holder--left" onclick="showImage(-1)" >
+                <img class="arrow__item arrow__item--left" src="img/arrow.png">
+            </button>
+
+            <button class="pause-button" onclick="toggleLoop()">
+                <img class="pause-button__img" src="img/pause-button.png">
+            </button> 
+
+            <div class="img__holder">
                 <img class="logo__image logo__image--current" src="img/the-rare-banana-logo-test-I.png">
                 <img class="logo__image" src="img/the-rare-banana-logo-test-II.png">
                 <img class="logo__image" src="img/the-rare-banana-logo-test-III.png">
             </div>
-            <button class="arrow--left" id="left-button" onclick="showImage(-1)">&rarr;</button>
+
+            <button class="arrow__holder arrow__holder--right" onclick="showImage(1)" >
+                <img class="arrow__item arrow__item--right" src="img/arrow.png">
+            </button>
         </div>
     </div>
 
