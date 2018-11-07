@@ -8,6 +8,7 @@ var currentIdx = 0;
 var intervalAni;
 
 toggleInterval();
+detectswipe("imgHolder", myfunction);
 
 
 function showImage(direction){
@@ -38,16 +39,17 @@ function toggleInterval(){
     }
 }
 
+function resetInterval(){
+    window.clearInterval(intervalAni);
+    intervalAni = null;
+    toggleInterval();
+}
+
 
 function loopImage(){
     showImage(1);
 }
 
-detectswipe("imgHolder", myfunction);
-
-function test(){
-    console.log("test");
-}
 
 function detectswipe(el,func) {
     swipe_det = new Object();
@@ -94,7 +96,9 @@ function detectswipe(el,func) {
 
     if(d == "l"){
         showImage(-1);
+        resetInterval();
     }else if(d == "r"){
         showImage(1);
+        resetInterval();
     }
   }
