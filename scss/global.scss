@@ -10,28 +10,18 @@ body{
 
 /** Header */
 header{ 
-    a{
-        font-family: "Times New Roman", Times, serif;
-        font-style: normal;
-        text-transform: uppercase;
-        color: black;
-        display: inline-block;
-        text-decoration: unset;
 
-        &:hover {
-            color: hotpink;
+    background-color: white;
+    h1{
+        margin-left: 10px;
+        &:hover{
+            cursor: pointer;
         }
     }
 
-    h1{
-        margin-left: 10px;
-    }
-
     li{
-        background-color: lightblue;
         list-style-type: none;
         display: flex;
-
         a{
             margin-left: 10px;
             margin-right: 10px;
@@ -39,12 +29,45 @@ header{
             display: block;
         }
     }
+}
 
+.logo{
+    height: 6vw;
+    font-size: xx-large;
+    font-family: "Times New Roman", Times, serif;
+    font-style: normal;
+    text-transform: uppercase;
+    text-decoration: unset;
+    color: blue;
+    word-spacing: 0.6vw;
+    text-shadow: 3px 2px lightgrey;
+
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.menu__item{
+    font-family: "Times New Roman", Times, serif;
+    font-style: normal;
+    font-size: 2vw;
+    text-transform: uppercase;
+    color: white;
+    display: inline-block;
+    text-decoration: unset;
+
+    &:hover {
+        color: black;
+    }
+
+    &--current{
+        background-color: #FF403E;
+    }
 }
 
 
 .nav {
-    background-color: blue;
+    background-color: #D60A07;
     display: flex;
     align-items: stretch;
     justify-content: center;
@@ -55,7 +78,6 @@ header{
         margin: 0;
         flex: 1;
         justify-content: center;
-        margin-left: -56px;
         width: 35px;
     }
 }
@@ -67,14 +89,36 @@ header{
     width: 80%;
 }
 
-
+/* FOOTER */
 footer{
     .footerText{
-        background-color: brown;
+        background-color: #D60A07;
         display: flex;
         align-items: stretch;
         justify-content: center;
     }
 } 
 
+.upper-footer__holder{
+    //background-color: hotpink;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+.footer__list{
+    background-color: hotpink;
+    height: 100%;
+    list-style: none;
+    
+    &__item{
+        margin: 10vw;
+    }
+}
 
+
+.footer__logo{
+    background-color: hotpink;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}

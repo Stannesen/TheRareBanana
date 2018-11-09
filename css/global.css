@@ -7,29 +7,49 @@ body {
     justify-content: center; }
 
 /** Header */
-header a {
+header {
+  background-color: white; }
+  header h1 {
+    margin-left: 10px; }
+    header h1:hover {
+      cursor: pointer; }
+  header li {
+    list-style-type: none;
+    display: flex; }
+    header li a {
+      margin-left: 10px;
+      margin-right: 10px;
+      align-self: center;
+      display: block; }
+
+.logo {
+  height: 6vw;
+  font-size: xx-large;
   font-family: "Times New Roman", Times, serif;
   font-style: normal;
   text-transform: uppercase;
-  color: black;
+  text-decoration: unset;
+  color: blue;
+  word-spacing: 0.6vw;
+  text-shadow: 3px 2px lightgrey; }
+  .logo:hover {
+    cursor: pointer; }
+
+.menu__item {
+  font-family: "Times New Roman", Times, serif;
+  font-style: normal;
+  font-size: 2vw;
+  text-transform: uppercase;
+  color: white;
   display: inline-block;
   text-decoration: unset; }
-  header a:hover {
-    color: hotpink; }
-header h1 {
-  margin-left: 10px; }
-header li {
-  background-color: lightblue;
-  list-style-type: none;
-  display: flex; }
-  header li a {
-    margin-left: 10px;
-    margin-right: 10px;
-    align-self: center;
-    display: block; }
+  .menu__item:hover {
+    color: black; }
+  .menu__item--current {
+    background-color: #FF403E; }
 
 .nav {
-  background-color: blue;
+  background-color: #D60A07;
   display: flex;
   align-items: stretch;
   justify-content: center; }
@@ -39,7 +59,6 @@ header li {
     margin: 0;
     flex: 1;
     justify-content: center;
-    margin-left: -56px;
     width: 35px; }
 
 .nav__cnt {
@@ -48,10 +67,29 @@ header li {
   justify-content: center;
   width: 80%; }
 
+/* FOOTER */
 footer .footerText {
-  background-color: brown;
+  background-color: #D60A07;
   display: flex;
   align-items: stretch;
+  justify-content: center; }
+
+.upper-footer__holder {
+  height: 100%;
+  display: flex;
+  justify-content: center; }
+
+.footer__list {
+  background-color: hotpink;
+  height: 100%;
+  list-style: none; }
+  .footer__list__item {
+    margin: 10vw; }
+
+.footer__logo {
+  background-color: hotpink;
+  height: 100%;
+  display: flex;
   justify-content: center; }
 
 /*# sourceMappingURL=global.css.map */

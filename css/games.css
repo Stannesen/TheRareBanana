@@ -3,7 +3,7 @@ body .background {
   align-items: stretch;
   justify-content: center;
   z-index: 1;
-  background-image: url("../img/redDeadRedemtion2.jpg");
+  background-color: lightsteelblue;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
