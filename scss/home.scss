@@ -45,33 +45,49 @@
         height: 20vw;
         margin: 1.5%;
         display: inline-block;
-        background-color: blueviolet;
-        &:hover{
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        }
-    
-        img{
-            width: 100%;
-        }
-
-        &--clock{
-            background-color: hotpink;
-        }
+        background-color: #D60A07;
+        vertical-align: middle;
+        display: inline-flex;
+        flex-direction: column;
+        padding: 1%;
+        box-sizing: border-box;
     }
 }
 
 canvas#clock {
-    padding: 0px;
-    width: 100px;
-    width: 100px;
+    height: 80%;
+    align-self: flex-end;
+
 }
 
 .clock{
-    flex:0;
     align-items: stretch;
     justify-content: center;
     display: flex;
+    height: 100%;
+    width: 100%;
+}
 
+.time__text{
+    margin: 0px;
+    color: blue;
+
+    &--top{
+        margin: 0px;
+        color: white;
+        font-size: 34px;
+        font-family: fantasy;
+    }
+
+    &--cnt{
+        color: white;
+        font-size: 23px;
+    }
+}
+
+
+.clock__digital{
+    color: blue;
 }
 
 

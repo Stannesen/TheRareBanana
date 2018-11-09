@@ -12,6 +12,10 @@ function displayTime() {
     var h = now.getHours();
     var m = now.getMinutes();
     var s = now.getSeconds();
+    var d = now.getDay();
+
+    var days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+    var months = ["Jan" , "Feb", "Mar", "Apr", "May", "jun", "jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
     var time = now.getTime();
     var offset = now.getTimezoneOffset() / 60;
@@ -19,9 +23,46 @@ function displayTime() {
     var canvas = document.querySelector("#clock");
     var context = canvas.getContext("2d");
 
-    /*var digitalClock = document.getElementById("digitalText");
-    digitalClock.font = "130px Arial";
-    digitalClock.style.color = "red";
+    var digitalClock = document.getElementById("digitalText");
+    var dayText = document.getElementById("currentDay");
+    var dateText = document.getElementById("currentDate");
+
+    var curretMonth = now.getMonth();
+    var currentDate = now.getDate() + " " + months[curretMonth] + " " + now.getFullYear();
+    var lastDate = dateText.innerHTML;
+    if(currentDate == lastDate){
+        //console.log("same date");
+    }else{
+        dateText.innerHTML = currentDate;
+        //console.log("new date"); 
+    }
+
+    var lastDay = dayText.innerHTML;
+    var currentDay = days[d - 1];
+    //console.log("Last day: " + lastDay);
+    //console.log("current day: " + currentDay);
+
+    if(lastDay == currentDay){
+        //console.log("Same Day");
+    }else{
+        dayText.innerHTML = currentDay;
+        //console.log("New Day");
+    }
+    
+
+    var weekNrText = document.getElementById("weekNr");
+    var lastWeekNrText = weekNrText.innerHTML;
+    var currentWeekNr = "Week: " + getWeekNumber(new Date());
+
+    if(lastWeekNrText == currentWeekNr){
+        //console.log("same week");
+    }else{
+        weekNrText.innerHTML = (currentWeekNr);
+        //console.log("New Week");
+    }
+
+
+
     if(s < 10){
         s = "0" + s;
     }
@@ -33,7 +74,6 @@ function displayTime() {
         m = "0" + m;
     }
     digitalClock.innerHTML = h + " : " + m + " : " + s;
-*/
     var houreThinkness = 10;
     
     var clockScale = 700;
@@ -41,6 +81,20 @@ function displayTime() {
         clockScale = 200;
     }if(clockScale <= 250){
         houreThinkness = houreThinkness / 1.5;
+    }
+
+    function getWeekNumber(d) {
+        // Copy date so don't modify original
+        d = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
+        // Set to nearest Thursday: current date + 4 - current day number
+        // Make Sunday's day number 7
+        d.setUTCDate(d.getUTCDate() + 4 - (d.getUTCDay()||7));
+        // Get first day of year
+        var yearStart = new Date(Date.UTC(d.getUTCFullYear(),0,1));
+        // Calculate full weeks to nearest Thursday
+        var weekNo = Math.ceil(( ( (d - yearStart) / 86400000) + 1)/7);
+        // Return array of week number
+        return [weekNo];
     }
 
     
@@ -202,4 +256,5 @@ function displayTime() {
         context.fillStyle = 'black';
         context.strokeStyle = "black";
     context.stroke();
+    
 }
