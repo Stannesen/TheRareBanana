@@ -91,33 +91,11 @@ header{
 
 /* FOOTER */
 footer{
-    .footerText{
-        background-color: #D60A07;
-        display: flex;
-        align-items: stretch;
-        justify-content: center;
-    }
+    background-color: #D60A07;
 } 
 
-.upper-footer__holder{
-    //background-color: hotpink;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-}
-.footer__list{
-    background-color: hotpink;
-    height: 100%;
-    list-style: none;
-    
-    &__item{
-        margin: 10vw;
-    }
-}
-
-
 .footer__logo{
-    background-color: hotpink;
+    background-color: #D60A07;
     height: 100%;
     display: flex;
     justify-content: center;

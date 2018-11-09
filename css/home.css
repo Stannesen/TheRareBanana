@@ -21,9 +21,38 @@
     box-sizing: border-box; }
 
 .main {
-  display: flex;
   align-items: stretch;
   justify-content: center; }
+
+.grid-container {
+  display: block;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
+  width: 100%;
+  max-width: 100%; }
+  .grid-container .grid-item {
+    width: 30.3333333%;
+    height: 20vw;
+    margin: 1.5%;
+    display: inline-block;
+    background-color: blueviolet; }
+    .grid-container .grid-item:hover {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+    .grid-container .grid-item img {
+      width: 100%; }
+    .grid-container .grid-item--clock {
+      background-color: hotpink; }
+
+canvas#clock {
+  padding: 0px;
+  width: 100px;
+  width: 100px; }
+
+.clock {
+  flex: 0;
+  align-items: stretch;
+  justify-content: center;
+  display: flex; }
 
 .arrow__holder {
   display: flex;

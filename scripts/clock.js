@@ -19,7 +19,7 @@ function displayTime() {
     var canvas = document.querySelector("#clock");
     var context = canvas.getContext("2d");
 
-    var digitalClock = document.getElementById("digitalText");
+    /*var digitalClock = document.getElementById("digitalText");
     digitalClock.font = "130px Arial";
     digitalClock.style.color = "red";
     if(s < 10){
@@ -33,7 +33,7 @@ function displayTime() {
         m = "0" + m;
     }
     digitalClock.innerHTML = h + " : " + m + " : " + s;
-
+*/
     var houreThinkness = 10;
     
     var clockScale = 700;
