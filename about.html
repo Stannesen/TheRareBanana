@@ -9,33 +9,42 @@
     <title>Home</title>
 </head>
 <body>
-    <header>
-        <h1>The Rare Banana</h1>
-        <div class="nav">
-            <div class="nav__cnt">
+        <header>
+            <button class="mobile-menu">
+                <img class="mobile-menu--img" src="img/mobile-menu-button.png" onclick="mobileMenu()">
+            </button>
+            <div class="logo__holder">
+                <img class="logo__img" src="img/top-logo.png" onclick="logoClick()">
+            </div>
+            <div class="nav">
+                <div class="nav__cnt">
+                    <ul>
+                        <li class="nav__cnt__list" >
+                            <a class="menu__item" href="index.html">Home</a>
+                        <li class="nav__cnt__list" >
+                            <a class="menu__item menu__item--current" href="about.html">about</a>
+                        <li class="nav__cnt__list" >
+                            <a class="menu__item" href="games.html">Games</a></li></li></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="mobile-nav" class="mobile-nav">
                 <ul>
-                    <li><a href="index.html">Home</a></li><li>
-                        <a class="" href="about.html">About</a>
-                        <a class="" href="games.html">Games</a>
-                        <a class="" href="clock.html">clock</a></li><li>
+                    <li class="mobile-nav__list"><a class="mobile-menu__item" href="index.html">Home</a>
+                        <a class="mobile-menu__item" href="about.html">about</a>
+                        <a class="mobile-menu__item" href="games.html">Games</a>
+                    </li>
                 </ul>
             </div>
-        </div>
-    </header>
-    <h1 class="construction">this page is under construction</h1>
-    <div class="main">
-        <div id="cf7" class="shadow">
-            <img class='opaque' src="/img/the-rare-banana-logo-test-I.png" />
-            <img src="/img/the-rare-banana-logo-test-II.png" />
-            <img src="/img/the-rare-banana-logo-test-III.png" />
-          </div>
-          <p id="cf7_controls">
-            <span class="selected">Image 1</span>
-            <span>Image 2</span>
-            <span>Image 3</span>
-          </p>
-    </div>
+        </header>
 
+    <h1 class="construction">this page is under construction</h1>
+    <footer>
+        <div class="footer__logo">
+            <p>Copyright &copy; 2018 The Rare Banana</p>
+        </div>
+    </footer> 
     <script src="scripts/about.js"></script>
+    <script src="scripts/global.js"></script>
 </body>
 </html>

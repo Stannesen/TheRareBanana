@@ -36,11 +36,26 @@ header {
 
 .mobile-nav {
   display: none;
-  background-color: hotpink;
+  background-color: lightblue;
   z-index: 20;
   position: absolute;
   width: 100%;
-  top: 86px; }
+  top: 15vw; }
+  .mobile-nav ul {
+    padding: 2vw; }
+  .mobile-nav__list {
+    background-color: #D60A07;
+    list-style-type: none; }
+    .mobile-nav__list a {
+      align-self: left;
+      display: block;
+      border-bottom: 1px solid black;
+      font-family: "Times New Roman", Times, serif;
+      font-style: normal;
+      font-size: 15vw;
+      text-transform: uppercase;
+      color: white;
+      text-decoration: unset; }
 
 .logo__holder {
   display: flex;
@@ -103,7 +118,8 @@ footer {
 
 @media screen and (max-width: 1020px) {
   header {
-    height: 19vw; }
+    height: 15vw;
+    border-bottom: 1px solid black; }
     header .logo__img {
       height: 10vw;
       display: flex;
