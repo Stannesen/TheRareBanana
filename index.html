@@ -12,7 +12,12 @@
 </head>
 <body>
     <header>
-        <img class="logo" src="img/top-logo.png">
+        <button class="mobile-menu">
+            <img class="mobile-menu--img" src="img/mobile-menu-button.png" onclick="mobileMenu()">
+        </button>
+        <div class="logo__holder">
+            <img class="logo__img" src="img/top-logo.png">
+        </div>
         <div class="nav">
             <div class="nav__cnt">
                 <ul>
@@ -22,6 +27,15 @@
                         <a class="menu__item" href="clock.html">clock</a></li>
                 </ul>
             </div>
+        </div>
+        <div id="mobile-nav" class="mobile-nav">
+            <ul>
+                <li><a class="mobile-menu__item" href="index.html">Home</a>
+                    <a class="mobile-menu__item" href="about.html">about</a>
+                    <a class="mobile-menu__item" href="games.html">Games</a>
+                    <a class="mobile-menu__item" href="clock.html">clock</a>
+                </li>
+            </ul>
         </div>
     </header>
 

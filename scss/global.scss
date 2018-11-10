@@ -21,7 +21,6 @@ header{
 
     li{
         list-style-type: none;
-        display: flex;
         a{
             margin-left: 10px;
             margin-right: 10px;
@@ -31,7 +30,34 @@ header{
     }
 }
 
-.logo{
+.mobile-menu{
+    display: none;
+    background-color: white;
+    border-style: none;
+
+    .mobile-menu--img{
+        display: block;
+        height: 10vw;
+        width: 10vw;
+        position: absolute;
+        margin: 2vw;
+    }
+}
+
+.mobile-nav{
+    display: none;
+    background-color: hotpink;
+    z-index: 20;
+}
+
+
+
+.logo__holder{
+    display: flex;
+    justify-content: left;
+}
+
+.logo__img{
     height: 6vw;
     font-size: xx-large;
     font-family: "Times New Roman", Times, serif;
@@ -99,4 +125,29 @@ footer{
     height: 100%;
     display: flex;
     justify-content: center;
+}
+
+
+@media screen and (max-width: 1020px) {
+    header{
+        height: 19vw;
+
+        .logo__img{
+            height: 10vw;
+            display: flex;
+            justify-self: center;
+        }
+        
+        .logo__holder{
+            justify-content: center;
+        }
+
+        .nav{
+            display: none;
+        }
+
+        .mobile-menu{
+            display: block;
+        }
+    }
 }

@@ -10,6 +10,17 @@ var intervalAni;
 toggleInterval();
 detectswipe("imgHolder", myfunction);
 
+function mobileMenu(){
+    var mobileMenuHoler = document.getElementById("mobile-nav");
+    var currentDisplay = mobileMenuHoler.style.display;
+
+    if(currentDisplay == "block"){
+        mobileMenuHoler.style.display = "none";
+    }else{
+        mobileMenuHoler.style.display = "block";
+    }
+}
+
 
 function changeImage(direction){
     currentIdx = Math.max(0, Math.min(max, currentIdx + direction));

@@ -14,15 +14,34 @@ header {
     header h1:hover {
       cursor: pointer; }
   header li {
-    list-style-type: none;
-    display: flex; }
+    list-style-type: none; }
     header li a {
       margin-left: 10px;
       margin-right: 10px;
       align-self: center;
       display: block; }
 
-.logo {
+.mobile-menu {
+  display: none;
+  background-color: white;
+  border-style: none; }
+  .mobile-menu .mobile-menu--img {
+    display: block;
+    height: 10vw;
+    width: 10vw;
+    position: absolute;
+    margin: 2vw; }
+
+.mobile-nav {
+  display: none;
+  background-color: hotpink;
+  z-index: 20; }
+
+.logo__holder {
+  display: flex;
+  justify-content: left; }
+
+.logo__img {
   height: 6vw;
   font-size: xx-large;
   font-family: "Times New Roman", Times, serif;
@@ -32,7 +51,7 @@ header {
   color: blue;
   word-spacing: 0.6vw;
   text-shadow: 3px 2px lightgrey; }
-  .logo:hover {
+  .logo__img:hover {
     cursor: pointer; }
 
 .menu__item {
@@ -76,5 +95,19 @@ footer {
   height: 100%;
   display: flex;
   justify-content: center; }
+
+@media screen and (max-width: 1020px) {
+  header {
+    height: 19vw; }
+    header .logo__img {
+      height: 10vw;
+      display: flex;
+      justify-self: center; }
+    header .logo__holder {
+      justify-content: center; }
+    header .nav {
+      display: none; }
+    header .mobile-menu {
+      display: block; } }
 
 /*# sourceMappingURL=global.css.map */

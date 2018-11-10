@@ -105,4 +105,9 @@ canvas#clock {
   .pause-button:hover {
     cursor: pointer; }
 
+@media screen and (max-width: 1020px) {
+  .grid-container .grid-item {
+    width: 97%;
+    height: 50vw; } }
+
 /*# sourceMappingURL=home.css.map */
