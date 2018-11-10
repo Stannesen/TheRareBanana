@@ -18,16 +18,17 @@ header{
             cursor: pointer;
         }
     }
+}
 
-    li{
-        list-style-type: none;
+.nav__cnt__list{
+    list-style-type: none;
+    display: inline-block;
         a{
             margin-left: 10px;
             margin-right: 10px;
             align-self: center;
             display: block;
         }
-    }
 }
 
 .mobile-menu{
@@ -48,6 +49,9 @@ header{
     display: none;
     background-color: hotpink;
     z-index: 20;
+    position: absolute;
+    width: 100%;
+    top: 86px;
 }
 
 

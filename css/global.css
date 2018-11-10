@@ -13,13 +13,15 @@ header {
     margin-left: 10px; }
     header h1:hover {
       cursor: pointer; }
-  header li {
-    list-style-type: none; }
-    header li a {
-      margin-left: 10px;
-      margin-right: 10px;
-      align-self: center;
-      display: block; }
+
+.nav__cnt__list {
+  list-style-type: none;
+  display: inline-block; }
+  .nav__cnt__list a {
+    margin-left: 10px;
+    margin-right: 10px;
+    align-self: center;
+    display: block; }
 
 .mobile-menu {
   display: none;
@@ -35,7 +37,10 @@ header {
 .mobile-nav {
   display: none;
   background-color: hotpink;
-  z-index: 20; }
+  z-index: 20;
+  position: absolute;
+  width: 100%;
+  top: 86px; }
 
 .logo__holder {
   display: flex;
