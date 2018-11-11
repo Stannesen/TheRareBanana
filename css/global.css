@@ -24,7 +24,8 @@ header {
     margin-left: 10px;
     margin-right: 10px;
     align-self: center;
-    display: block; }
+    display: block;
+    height: 2vw; }
 
 .mobile-menu {
   display: none;
