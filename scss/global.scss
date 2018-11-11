@@ -24,14 +24,18 @@ header{
     list-style-type: none;
     display: inline-block;
     border-left: 1px solid white;
-    border-right: 1px solid white;
 
         a{
             margin-left: 10px;
             margin-right: 10px;
             align-self: center;
             display: block;
-            height: 2vw;
+            height: 25px;
+            line-height: 25px;
+        }
+
+        &:last-child{
+            border-right: 1px solid white;
         }
 }
 
@@ -87,9 +91,9 @@ header{
 
 .logo__holder{
     display: flex;
-    background-color: black;
     margin: 0 auto;
     max-width: 70vw;
+    padding: 9px 0;
 }
 
 .logo__img{
