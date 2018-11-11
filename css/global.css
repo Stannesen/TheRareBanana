@@ -85,10 +85,10 @@ header {
   .menu__item:hover {
     color: black; }
   .menu__item--current {
-    background-color: #FF403E; }
+    background-color: red; }
 
 .nav {
-  background-color: #D60A07;
+  background-color: #f224f2;
   display: flex;
   align-items: stretch;
   justify-content: center; }
