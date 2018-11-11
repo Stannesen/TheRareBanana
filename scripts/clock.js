@@ -14,7 +14,7 @@ function displayTime() {
     var s = now.getSeconds();
     var d = now.getDay();
 
-    var days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+    var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     var months = ["Jan" , "Feb", "Mar", "Apr", "May", "jun", "jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
     var time = now.getTime();
@@ -31,22 +31,16 @@ function displayTime() {
     var currentDate = now.getDate() + " " + months[curretMonth] + " " + now.getFullYear();
     var lastDate = dateText.innerHTML;
     if(currentDate == lastDate){
-        //console.log("same date");
     }else{
         dateText.innerHTML = currentDate;
-        //console.log("new date"); 
     }
 
     var lastDay = dayText.innerHTML;
-    var currentDay = days[d - 1];
-    //console.log("Last day: " + lastDay);
-    //console.log("current day: " + currentDay);
+    var currentDay = days[d];
 
     if(lastDay == currentDay){
-        //console.log("Same Day");
     }else{
         dayText.innerHTML = currentDay;
-        //console.log("New Day");
     }
     
 
@@ -55,10 +49,8 @@ function displayTime() {
     var currentWeekNr = "Week: " + getWeekNumber(new Date());
 
     if(lastWeekNrText == currentWeekNr){
-        //console.log("same week");
     }else{
         weekNrText.innerHTML = (currentWeekNr);
-        //console.log("New Week");
     }
 
 
