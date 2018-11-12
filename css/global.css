@@ -31,22 +31,21 @@ header {
 
 .mobile-menu {
   display: none;
-  background-color: white;
-  border-style: none; }
+  background-color: black;
+  border-style: none;
+  height: 100%;
+  width: fit-content; }
   .mobile-menu .mobile-menu--img {
     display: block;
     height: 10vw;
-    width: 10vw;
-    position: absolute;
-    margin: 2vw; }
+    width: 10vw; }
 
 .mobile-nav {
   display: none;
   background-color: black;
   z-index: 20;
   position: absolute;
-  width: 100%;
-  top: 15vw; }
+  width: 100%; }
   .mobile-nav ul {
     padding: 2vw; }
   .mobile-nav__list {
@@ -63,7 +62,7 @@ header {
       text-decoration: unset; }
 
 .top-bar {
-  display: block;
+  display: flex;
   background-color: black; }
 
 .logo__holder {
@@ -107,7 +106,6 @@ footer {
 
 @media screen and (max-width: 1020px) {
   header {
-    height: 15vw;
     border-bottom: 1px solid black; }
     header .logo__img {
       height: 7vw;
