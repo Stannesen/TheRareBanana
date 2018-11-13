@@ -1,10 +1,4 @@
-header {
-    background-color: red;
 
-    .mobile-menu{
-        background-color: red;
-    }
-}
 
 .background{
         
@@ -13,7 +7,7 @@ header {
     justify-content: center;
     z-index: 1;
     //background-image: url("../img/redDeadRedemtion2.jpg");
-    background-color: lightsteelblue;
+    background-color: white;
     background-size: cover; 
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -22,35 +16,45 @@ header {
 
 .main{
     display: inline-block;
-    background-color: rgba(100, 189, 248, 0.589);
-    width: 80%;
+    width: 60%;
 }
 
 .page-text{
     margin-left: 2vw;
 }
 
-.grid-container{
+.game__list{
     display: block;
     width: 100%;
     max-width: 100%;
+
+    &__text{
+        margin-left: 10px;
+    }
 }
 
-.grid-item{
+.game__list__item{
     width: 100%;
     display: flex;
     flex-direction: row;
-    border-top: 3px solid black;
-    padding: 1vw 0;
+    border-top: 1px solid black;
 
     &:hover{
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
+}
 
+.game__list__cnt{
+    display: flex;
+    margin-bottom: 10px;
     img{
-        width: 16vw;
-        height: 9vw;
+        width: 100%;
     }
+}
+
+.game__list__img-holder{
+    height:100%;
+    width: 25%;
 }
 
 
@@ -58,6 +62,10 @@ header {
     body{
         .main{
             width: 100%;
+        }
+
+        .game__list__img-holder{
+            width: 40%;
         }
     }
 }

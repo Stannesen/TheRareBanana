@@ -43,61 +43,63 @@
         </div>
     </header>
 
-    <div class="main">
-        <h1 class="page-text">
-            Home
-        </h1>
+    <div class="background">
+        <div class="main">
+            <h1 class="page-text">
+                Home
+            </h1>
 
-        <div id="grid-container" class="grid-container">
-            <div class="grid-item grid-item--clock">
-                <div class="clock">
-                    <div class="clock__text">
-                        <div class="time__text time__text--top">
-                            Current Time
+            <div id="grid-container" class="grid-container">
+                <div class="grid-item grid-item--clock">
+                    <div class="clock">
+                        <div class="clock__text">
+                            <div class="time__text time__text--top">
+                                Current Time
+                            </div>
+                            <div id="digitalText" class="time__text time__text--cnt">
+                                Hey
+                            </div>
+                            <div id="currentDate" class="time__text time__text--cnt">
+                                Hey
+                            </div>
+                            <div id="currentDay" class="time__text time__text--cnt">
+                                Hei
+                            </div>
+                            <div id="weekNr" class="time__text time__text--cnt">
+                                Hey
+                            </div>
                         </div>
-                        <div id="digitalText" class="time__text time__text--cnt">
-                            Hey
-                        </div>
-                        <div id="currentDate" class="time__text time__text--cnt">
-                            Hey
-                        </div>
-                        <div id="currentDay" class="time__text time__text--cnt">
-                            Hei
-                        </div>
-                        <div id="weekNr" class="time__text time__text--cnt">
-                            Hey
-                        </div>
+                        <canvas id="clock" width="50" height="50">
+                            If you can see this message, your browser does not support canvas 
+                            and needs an update. Sorry. :(
+                        </canvas>
                     </div>
-                    <canvas id="clock" width="50" height="50">
-                        If you can see this message, your browser does not support canvas 
-                        and needs an update. Sorry. :(
-                    </canvas>
-                </div>
-            </div><div class="grid-item">
-                    <p>Hei</p>
                 </div><div class="grid-item">
-                    <p>Hei</p>
-                </div>
-        </div>
-
-        <div class="image-changing">
-            <button class="arrow__holder arrow__holder--left" onclick="changeImage(-1), resetInterval()" >
-                <img class="arrow__item arrow__item--left" src="img/arrow.png">
-            </button>
-
-            <button class="pause-button" onclick="toggleInterval()">
-                <img class="pause-button__img" id="pausePlayAniImg" src="img/pause-button.png">
-            </button> 
-
-            <div class="img__holder" id="imgHolder">
-                <img class="logo__image logo__image--current" src="img/the-rare-banana-logo-test-I.png">
-                <img class="logo__image" src="img/the-rare-banana-logo-test-II.png">
-                <img class="logo__image" src="img/the-rare-banana-logo-test-III.png">
+                        <p>Hei</p>
+                    </div><div class="grid-item">
+                        <p>Hei</p>
+                    </div>
             </div>
 
-            <button class="arrow__holder arrow__holder--right" onclick="changeImage(1), resetInterval()" >
-                <img class="arrow__item arrow__item--right" src="img/arrow.png">
-            </button>
+            <div class="image-changing">
+                <button class="arrow__holder arrow__holder--left" onclick="changeImage(-1), resetInterval()" >
+                    <img class="arrow__item arrow__item--left" src="img/arrow.png">
+                </button>
+
+                <button class="pause-button" onclick="toggleInterval()">
+                    <img class="pause-button__img" id="pausePlayAniImg" src="img/pause-button.png">
+                </button> 
+
+                <div class="img__holder" id="imgHolder">
+                    <img class="logo__image logo__image--current" src="img/the-rare-banana-logo-test-I.png">
+                    <img class="logo__image" src="img/the-rare-banana-logo-test-II.png">
+                    <img class="logo__image" src="img/the-rare-banana-logo-test-III.png">
+                </div>
+
+                <button class="arrow__holder arrow__holder--right" onclick="changeImage(1), resetInterval()" >
+                    <img class="arrow__item arrow__item--right" src="img/arrow.png">
+                </button>
+            </div>
         </div>
     </div>
 

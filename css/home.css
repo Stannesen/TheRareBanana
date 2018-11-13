@@ -23,9 +23,13 @@
     border-color: hotpink;
     box-sizing: border-box; }
 
-.main {
+.background {
+  display: flex;
   align-items: stretch;
   justify-content: center; }
+
+.main {
+  width: 80%; }
 
 .grid-container {
   display: block;

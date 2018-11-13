@@ -31,10 +31,13 @@
     }
 }
 
-.main{
-    //display: flex;
+.background{
+    display: flex;
     align-items: stretch;
     justify-content: center;
+}
+.main{
+    width: 80%;
 }
 
 .grid-container{
