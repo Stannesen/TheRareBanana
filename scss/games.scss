@@ -27,10 +27,20 @@
     display: block;
     width: 100%;
     max-width: 100%;
+}
 
-    &__text{
-        margin-left: 10px;
-    }
+.game__text{
+    text-decoration: none;
+    color: black;
+}
+
+.game-name{
+    margin-left: 10px;
+    font-size: xx-large;
+    width: 100%;
+    height: fit-content;
+    color: black;
+    text-decoration: unset;
 }
 
 .game__list__item{
@@ -44,7 +54,7 @@
     }
 }
 
-.game__list__cnt{
+.game__item{
     display: flex;
     margin-bottom: 10px;
     img{
@@ -52,9 +62,30 @@
     }
 }
 
-.game__list__img-holder{
+.game__img-holder{
     height:100%;
     width: 25%;
+}
+
+.system__list{
+    list-style: none;
+    display: flex;
+}
+
+.system__platform{
+    margin-left: 10px;
+    color: white;
+    padding: 0px 5px;
+}
+
+.system__platform--xbox-one{
+    background-color: green;
+}
+.system__platform--ps4{
+    background-color: blue;
+}
+.system__platform--pc{
+    background-color: black;
 }
 
 
@@ -66,6 +97,10 @@
 
         .game__list__img-holder{
             width: 40%;
+        }
+
+        .game-name{
+            font-size: large;
         }
     }
 }
