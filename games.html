@@ -10,11 +10,11 @@
 </head>
 <body>
     <header>
-        <button class="mobile-menu">
-            <img class="mobile-menu--img" src="img/mobile-menu-button.png" onclick="mobileMenu()">
-        </button>
         <div class="top-bar">
-            <div class="logo__holder">
+            <button class="mobile-menu" onclick="mobileMenu()">
+                <img class="mobile-menu--img" src="img/mobile-menu-button.png">
+            </button>
+            <div class="logo">
                 <img class="logo__img" src="img/top-logo-test.png" onclick="logoClick()">
                 <div class="nav">
                     <div class="nav__cnt">
@@ -43,9 +43,22 @@
 
     <div class="background">
         <div id="main" class="main">
+            <h1 class="page-text">
+                Games
+            </h1>
+            
+            <h2 class="page-text">
+                Games of the mounth
+            </h2>
+
             <div id="grid-container" class="grid-container">
-                <div class="grid-item">
-                    <img src="img/red-dead-redemption-2-logo.png">
+                <div class="grid-item grid-item__red-dead-redemtion2">
+                    <div>
+                        <img src="img/game-img/red-dead-redemption-2.png">
+                        <h1 class="grid-item__text">
+                            Red Dead Redemtion 2
+                        </h1>
+                    </div>
                 </div><div class="grid-item">
                     <img src="img/assassins-creed-odyssey-logo.png">
                 </div><div class="grid-item">
@@ -56,12 +69,6 @@
                     <img src="img/spider-man-logo.png">
                 </div><div class="grid-item">
                     <img src="img/diablo-III-logo.png">
-                </div><div class="grid-item">
-                    <img src="img/minecraft-logo.png">
-                </div><div class="grid-item">
-                    <img src="img/spider-man-logo.png">
-                </div><div class="grid-item">
-                    <img src="img/spider-man-logo.png">
                 </div>
             </div>
         </div>

@@ -1,49 +1,62 @@
-header .top-bar{
+header {
     background-color: red;
+
+    .mobile-menu{
+        background-color: red;
+    }
 }
 
-
-body{ 
-    .background{
+.background{
         
-        display: flex;
-        align-items: stretch;
-        justify-content: center;
-        z-index: 1;
-        //background-image: url("../img/redDeadRedemtion2.jpg");
-        background-color: lightsteelblue;
-        background-size: cover; 
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        flex: 1;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    z-index: 1;
+    //background-image: url("../img/redDeadRedemtion2.jpg");
+    background-color: lightsteelblue;
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    flex: 1;
+}
 
-        .main{
-            display: inline-block;
-            background-color: rgba(100, 189, 248, 0.589);
-            width: 80%;
-            display: flex;
-            align-items: stretch;
-            justify-content: left;
-        }
-    }
+.main{
+    display: inline-block;
+    background-color: rgba(100, 189, 248, 0.589);
+    width: 80%;
+}
+
+.page-text{
+    margin-left: 2vw;
 }
 
 .grid-container{
     display: block;
-    grid-template-columns: auto auto auto;
-    justify-content: center;
     width: 100%;
     max-width: 100%;
+}
 
-    .grid-item{
-        width: 30.3333333%;
-        margin: 1.5%;
-        display: inline-block;
-        &:hover{
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        }
-    
-        img{
+.grid-item{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    border-top: 3px solid black;
+    padding: 1vw 0;
+
+    &:hover{
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    img{
+        width: 16vw;
+        height: 9vw;
+    }
+}
+
+
+@media screen and (max-width: 1020px){
+    body{
+        .main{
             width: 100%;
         }
     }

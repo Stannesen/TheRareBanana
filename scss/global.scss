@@ -41,10 +41,10 @@ header{
 
 .mobile-menu{
     display: none;
-    background-color: black;
     border-style: none;
     height: 100%;
     width: fit-content;
+    background-color: black;
 
     .mobile-menu--img{
         display: block;
@@ -61,34 +61,37 @@ header{
     width: 100%;
 
     ul{
-        padding: 2vw;
+        padding: 0vw;
+        margin: 0;
     }
 
     &__list{
         list-style-type: none;
 
         a{
-            align-self: left;
             display: block;
-            border-bottom: 1px solid white;
+            border-top: 1px solid white;
 
             font-family: "Times New Roman", Times, serif;
             font-style: normal;
-            font-size: 15vw;
+            font-size: 5vw;
             text-transform: uppercase;
             color: white;
             text-decoration: unset;
+            padding: 14px 15px 15px;
+        }
+
+        &:last-child{
+            border-bottom: 1px solid white;
         }
     }
 }
 
 .top-bar{
-    display: flex;
-    background-color: black;
-    
+    display: block;   
 }
 
-.logo__holder{
+.logo{
     display: flex;
     margin: 0 auto;
     max-width: 70vw;
@@ -120,6 +123,9 @@ header{
 
 
 .nav {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
     margin-left: 20px;
     ul{
         padding: 0; 
@@ -145,13 +151,17 @@ footer{
     header{
         border-bottom: 1px solid black;
 
+        .top-bar{
+            display: flex;
+        }
+
         .logo__img{
             height: 7vw;
             display: flex;
             justify-self: center;
         }
         
-        .logo__holder{
+        .logo{
             justify-content: center;
         }
 
