@@ -53,7 +53,9 @@
 
 .system__list {
   list-style: none;
-  display: flex; }
+  display: flex;
+  font-size: 18px;
+  padding-left: 10px; }
 
 .system__platform {
   margin-left: 10px;
@@ -75,6 +77,10 @@
   body .game__list__img-holder {
     width: 40%; }
   body .game-name {
-    font-size: large; } }
+    font-size: large; }
+  body .system__list {
+    font-size: 11px; }
+  body .game__item {
+    margin-bottom: 0px; } }
 
 /*# sourceMappingURL=games.css.map */

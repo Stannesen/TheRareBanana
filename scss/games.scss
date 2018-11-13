@@ -70,6 +70,8 @@
 .system__list{
     list-style: none;
     display: flex;
+    font-size: 18px;
+    padding-left: 10px;
 }
 
 .system__platform{
@@ -101,6 +103,14 @@
 
         .game-name{
             font-size: large;
+        }
+
+        .system__list{
+            font-size: 11px;
+        }
+
+        .game__item{
+            margin-bottom: 0px;
         }
     }
 }
