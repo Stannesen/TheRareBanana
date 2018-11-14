@@ -1,0 +1,33 @@
+.background{
+    display: flex;
+    justify-content: center;
+}
+
+.main{
+    width: 80%;
+}
+
+.game-text__holder{
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+}
+
+.star-rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  height: 100%;
+  
+
+}
+.star-rating > span {
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+}
+.star-rating > span:hover:before,
+.star-rating > span:hover ~ span:before {
+   content: "\2605";
+   position: absolute;
+   cursor: pointer;
+}

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/shadow-of-the-tomb-raider.css">
     <title>Home</title>
 </head>
 <body>
@@ -38,14 +39,55 @@
                 </li>
             </ul>
         </div>
-    </header>
+    </header>  
+    
+    <div class="background">
+        <div class="main">
+            <div class="game-text__holder">
+                <h1 class="game-text">Shadow Of The Tomb Rider</h1>
+            </div>
 
-    <h1 class="construction">Shadow Of The Tomb Rider</h1>
+            <div class="rating">
+                <div class="star-rating">
+                    <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                </div>
+
+                <input id="rating-slider" type="range" min="1" max="6" value="1">
+                <div id="rating-value" clsss="rating-value">
+                </div>
+                <button type="submit" onclick="submitRating()">Submit</button>
+                <div id="test" clsss="rating-value">
+                    Current Rating: Getting Result
+                </div>
+                <div id="test2" clsss="rating-value">
+                    Current Entries: Getting Result
+                </div>
+            </div>
+        </div>
+    </div>
+
     <footer>
         <div class="footer__logo">
             <p>Copyright &copy; 2018 The Rare Banana</p>
         </div>
     </footer> 
     <script src="../scripts/global.js"></script>
+    <script src="../scripts/shadow-of-the-tomb-raider.js"></script>
+    
+    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+        apiKey: "AIzaSyDAs-PQ-7JcjLbuknp8G17Gs5iRPzVfOEI",
+        authDomain: "the-rare-banana.firebaseapp.com",
+        databaseURL: "https://the-rare-banana.firebaseio.com",
+        projectId: "the-rare-banana",
+        storageBucket: "the-rare-banana.appspot.com",
+        messagingSenderId: "366223492487"
+        };
+        firebase.initializeApp(config);
+
+        
+    </script>
 </body>
 </html>
