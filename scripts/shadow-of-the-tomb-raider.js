@@ -14,6 +14,34 @@ slider.oninput = function(){
     output.innerHTML = slider.value;
 }
 
+function starRating(starPressed){
+    var starList = [];
+    var starListName = ["star-one", "star-two", "star-three", "star-four", "star-five"];
+
+    for(var i = 0; i < 5; i++){
+        starList[i] = document.getElementById(starListName[i]);
+        //console.log(starList[i]);
+    }
+
+    for(var i = 0; i < starPressed; i++){
+        var star = starList[i];
+        star.innerHTML = "&#x2605";
+    }
+    
+    for(var i = 0; i < 5 - starPressed; i++){
+        //console.log(i);
+        var left = starPressed + i;
+        var star = starList[left];
+
+        star.innerHTML = "☆";
+        //console.log(star);
+    }
+    var starOne = starList[3];
+    //starOne.innerHTML = "&#x2605";
+
+    //console.log(starList[0]);
+}
+
 function submitRating(){
     var setRating = value[slider.value - 1];
     var newValue = 0;
