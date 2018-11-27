@@ -7,19 +7,21 @@
     width: 80%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    
 }
 
 .rating{
-    width: 40%;
+    width: fit-content;
     height: fit-content;
 }
 
 .game-text__holder{
-    width: 100%;
+
+    img{
+        height: 100px;
+    }
 }
+
 
 .star{
     font-size: 40px;
@@ -39,10 +41,45 @@
   width: 1.1em;
 }
 
-.star-rating > button:hover:before,
-.star-rating > button:hover ~ button:before {
-   content: "\2605";
-   position: absolute;
-   cursor: pointer;
-   direction: rtl;
+
+.star-rating__text{
+    border-right: 1px solid black;
+    display: block;
+    width: fit-content;
+
+    ul{
+        margin: 0px;
+    }
+    li{
+        list-style: none;
+    }
+}
+
+.star-rating-result{
+    display: flex;
+
+}
+
+.star-result{
+    border-bottom: 1px solid black;
+    height: 40px;
+    font-size: 30px;
+}
+
+.star-rating-result__text{
+    ul{
+        margin: 0;
+        padding:0;
+    }
+    
+    li{
+        list-style: none;
+    }
+}
+
+.star-result-item{
+    border-bottom: 1px solid black;
+    height: 40px;
+    font-size: 30px;
+    padding-left: 20px;
 }

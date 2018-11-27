@@ -45,23 +45,62 @@
         <div class="main">
             <div class="game-text__holder">
                 <h1 class="game-text">Shadow Of The Tomb Rider</h1>
+                <img src="../img/game-img/shadow-of-the-tomb-raider.png">
             </div>
 
             <div class="rating">
                 <div class="star-rating">
-                    <button class="star" id="star-five" onclick="starRating(5)">☆</button>
-                    <button class="star" id="star-four" onclick="starRating(4)">☆</button>
-                    <button class="star" id="star-three" onclick="starRating(3)">☆</button>
-                    <button class="star" id="star-two" onclick="starRating(2)">☆</button>
-                    <button class="star" id="star-one" onclick="starRating(1)">☆</button>
+                    <button class="star" id="star-five" onclick="starRating(5)" onmouseover="starRating(5)">☆</button><button 
+                    class="star" id="star-four" onclick="starRating(4)" onmouseover="starRating(4)">☆</button><button 
+                    class="star" id="star-three" onclick="starRating(3)" onmouseover="starRating(3)">☆</button><button 
+                    class="star" id="star-two" onclick="starRating(2)" onmouseover="starRating(2)">☆</button><button 
+                    class="star" id="star-one" onclick="starRating(1)" onmouseover="starRating(1)">☆</button>
                 </div>
 
-                <input id="rating-slider" type="range" min="1" max="6" value="1">
                 <div id="rating-value" clsss="rating-value">
                 </div>
                 <button type="submit" onclick="submitRating()">Submit</button>
-                <div id="test" clsss="rating-value">
-                    Current Rating: Getting Result
+
+                <div clsss="rating-result">
+                    <span id="rating-result__text">
+                        Current Rating: Getting Result
+                    </span>
+                    <div class="star-rating-result">
+                        <div id="star-rating__text" class="star-rating__text">
+                            <ul>
+                                <li>
+                                    <div class="star-result one-star">
+                                        1. ★
+                                    </div><div class="star-result two-star">
+                                        2. ★★
+                                    </div><div class="star-result three-star">
+                                        3. ★★★
+                                    </div><div class="star-result four-star">
+                                        4. ★★★★
+                                    </div><div class="star-result five-star">
+                                        5. ★★★★★
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="star-rating-result__text">
+                            <ul>
+                                <li>
+                                    <div class="star-result-item one-star-text" id="one-star-text">
+                                        1
+                                    </div><div class="star-result-item two-star-text" id="two-star-text">
+                                        2
+                                    </div><div class="star-result-item three-star-text" id="three-star-text">
+                                        3
+                                    </div><div class="star-result-item four-star-text" id="four-star-text">
+                                        4
+                                    </div><div class="star-result-item five-star-text" id="five-star-text">
+                                        5
+                                    </div>  
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
                 <div id="test2" clsss="rating-value">
                     Current Entries: Getting Result
