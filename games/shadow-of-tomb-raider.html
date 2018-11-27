@@ -44,67 +44,115 @@
     <div class="background">
         <div class="main">
             <div class="game-text__holder">
-                <h1 class="game-text">Shadow Of The Tomb Rider</h1>
-                <img src="../img/game-img/shadow-of-the-tomb-raider.png">
+                <img class="game-text" src="../img/game-img/shadow-of-the-tomb-raider-logo.png">
             </div>
 
-            <div class="rating">
-                <div class="star-rating">
-                    <button class="star" id="star-five" onclick="starRating(5)" onmouseover="starRating(5)">☆</button><button 
-                    class="star" id="star-four" onclick="starRating(4)" onmouseover="starRating(4)">☆</button><button 
-                    class="star" id="star-three" onclick="starRating(3)" onmouseover="starRating(3)">☆</button><button 
-                    class="star" id="star-two" onclick="starRating(2)" onmouseover="starRating(2)">☆</button><button 
-                    class="star" id="star-one" onclick="starRating(1)" onmouseover="starRating(1)">☆</button>
-                </div>
+            <div class="game-cnt">
 
-                <div id="rating-value" clsss="rating-value">
-                </div>
-                <button type="submit" onclick="submitRating()">Submit</button>
+                <div class="game-info">
+                    <div class="header">
+                        Game Info
+                    </div >
+                    
+                    <div class="cat-text">
+                        Developer: 
+                        <a class="cat-text__cnt" href="https://www.crystald.com/">Crystal Dynamics</a>
+                        <a class="cat-text__cnt" href="https://www.eidosmontreal.com/en">Eidos-Montréal</a>
+                    </div>
 
-                <div clsss="rating-result">
-                    <span id="rating-result__text">
-                        Current Rating: Getting Result
-                    </span>
-                    <div class="star-rating-result">
-                        <div id="star-rating__text" class="star-rating__text">
-                            <ul>
-                                <li>
-                                    <div class="star-result one-star">
-                                        1. ★
-                                    </div><div class="star-result two-star">
-                                        2. ★★
-                                    </div><div class="star-result three-star">
-                                        3. ★★★
-                                    </div><div class="star-result four-star">
-                                        4. ★★★★
-                                    </div><div class="star-result five-star">
-                                        5. ★★★★★
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="star-rating-result__text">
-                            <ul>
-                                <li>
-                                    <div class="star-result-item one-star-text" id="one-star-text">
-                                        1
-                                    </div><div class="star-result-item two-star-text" id="two-star-text">
-                                        2
-                                    </div><div class="star-result-item three-star-text" id="three-star-text">
-                                        3
-                                    </div><div class="star-result-item four-star-text" id="four-star-text">
-                                        4
-                                    </div><div class="star-result-item five-star-text" id="five-star-text">
-                                        5
-                                    </div>  
-                                </li>
-                            </ul>
+                    <div class="cat-text">
+                        Publisher:
+                        <a class="cat-text__cnt" href="https://www.square-enix.com/">Square Enix</a>
+                    </div>
+
+                    <div class="cat-text">
+                        Genre:
+                        <div class="cat-text__cnt">Action/Adventure</div>
+                    </div>
+                    
+                    <div class="cat-text">
+                        Players:
+                        <div class="cat-text__cnt">Single player, Co-op</div>
+                    </div>
+                    
+                    <div class="cat-text">
+                        Release:
+                        <div class="cat-text__cnt">September 14, 2018</div>
+                    </div>
+
+                    <div class="cat-text">
+                        Platforms:
+                        <div class="cat-text__cnt">
+                            <div class="cat-text__cnt cat-text__cnt--pc">PC</div>
+                            <div class="cat-text__cnt cat-text__cnt--ps4">PS4</div>
+                            <div class="cat-text__cnt cat-text__cnt--xbox">Xbox</div>
+                            
+                            
                         </div>
                     </div>
                 </div>
-                <div id="test2" clsss="rating-value">
-                    Current Entries: Getting Result
+
+                <div class="rating">
+                    <div class="star-rating">
+                        <button class="star" id="star-one" onclick="submitRating()" onmouseover="starRating(1)">☆</button><button 
+                        class="star" id="star-two" onclick="submitRating()" onmouseover="starRating(2)">☆</button><button 
+                        class="star" id="star-three" onclick="submitRating()" onmouseover="starRating(3)">☆</button><button 
+                        class="star" id="star-four" onclick="submitRating()" onmouseover="starRating(4)">☆</button><button 
+                        class="star" id="star-five" onclick="submitRating()" onmouseover="starRating(5)">☆</button>
+                    </div>
+
+                    <div id="rating-value" clsss="rating-value">
+                    </div>
+
+                    <div clsss="rating-result">
+                        <span id="rating-result__text">
+                            Current Rating: Loading...
+                        </span>
+                        <div class="star-rating-result">
+                            <div id="star-rating__text" class="star-rating__text">
+                                <ul>
+                                    <li>
+                                        <div class="star-result one-star">
+                                            1. ★
+                                        </div><div class="star-result two-star">
+                                            2. ★★
+                                        </div><div class="star-result three-star">
+                                            3. ★★★
+                                        </div><div class="star-result four-star">
+                                            4. ★★★★
+                                        </div><div class="star-result five-star">
+                                            5. ★★★★★
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="star-rating-result__text">
+                                <ul>
+                                    <li>
+                                        <div class="star-result-item one-star-text" id="one-star-text">
+                                            Loading...
+                                        </div><div class="star-result-item two-star-text" id="two-star-text">
+                                            Loading...
+                                        </div><div class="star-result-item three-star-text" id="three-star-text">
+                                            Loading...
+                                        </div><div class="star-result-item four-star-text" id="four-star-text">
+                                            Loading...
+                                        </div><div class="star-result-item five-star-text" id="five-star-text">
+                                            Loading...
+                                        </div>  
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="test2" clsss="rating-value">
+                        Current Entries: Loading...
+                    </div>
                 </div>
+            </div>
+
+            <div class="game-img">
+                <img src="../img/game-img/shadow-of-the-tomb-raider-img1.png">
             </div>
         </div>
     </div>

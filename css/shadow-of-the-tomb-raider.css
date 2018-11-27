@@ -4,26 +4,71 @@
 
 .main {
   width: 80%;
-  display: flex;
-  flex-direction: column;
-  align-items: center; }
+  margin-top: 20px; }
 
 .rating {
   width: fit-content;
   height: fit-content; }
 
-.game-text__holder img {
-  height: 100px; }
+.game-text {
+  width: 100%; }
+
+.game-cnt {
+  display: flex; }
+
+.game-info {
+  width: 100%;
+  background-color: #c64027;
+  margin-right: 20px;
+  color: white; }
+
+.header {
+  width: 100%;
+  text-align: center;
+  font-size: 60px; }
+
+.cat-text {
+  margin-left: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  width: fit-content; }
+  .cat-text__cnt {
+    margin-left: 5px;
+    width: fit-content;
+    float: right;
+    font-size: 20px;
+    font-weight: normal; }
+    .cat-text__cnt--xbox {
+      color: white;
+      background-color: green;
+      padding: 0px 5px; }
+    .cat-text__cnt--pc {
+      color: white;
+      background-color: black;
+      padding: 0px 5px; }
+    .cat-text__cnt--ps4 {
+      color: white;
+      background-color: blue;
+      padding: 0px 5px; }
+
+.game-text__holder {
+  position: relative;
+  background-image: url("../img/game-img/shadow-of-the-tomb-raider.png");
+  height: 25vw;
+  width: 100%;
+  background-position: bottom;
+  background-size: cover;
+  margin-bottom: 20px; }
 
 .star {
   font-size: 40px;
   border-style: none;
-  background-color: white; }
+  background-color: darkgray;
+  color: yellow; }
 
 .star-rating {
-  unicode-bidi: bidi-override;
-  direction: rtl;
-  width: fit-content; }
+  width: fit-content;
+  border: 3px solid black; }
 
 .star-rating > button {
   display: inline-block;
@@ -33,14 +78,16 @@
 .star-rating__text {
   border-right: 1px solid black;
   display: block;
-  width: fit-content; }
+  width: 300px; }
   .star-rating__text ul {
-    margin: 0px; }
+    margin: 0px;
+    padding: 0px; }
   .star-rating__text li {
     list-style: none; }
 
 .star-rating-result {
-  display: flex; }
+  display: flex;
+  border: 2px solid black; }
 
 .star-result {
   border-bottom: 1px solid black;
@@ -57,6 +104,12 @@
   border-bottom: 1px solid black;
   height: 40px;
   font-size: 30px;
-  padding-left: 20px; }
+  padding: 0px 10px; }
+
+.game-img {
+  width: 100%; }
+  .game-img img {
+    height: 100%;
+    width: 100%; }
 
 /*# sourceMappingURL=shadow-of-the-tomb-raider.css.map */

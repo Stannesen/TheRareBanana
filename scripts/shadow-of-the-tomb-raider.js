@@ -43,6 +43,7 @@ function starRating(starPressed){
 
 
 function submitRating(){
+    executed = false;
     var setRating = value[starValue - 1];
     var newValue = 0;
 
@@ -114,8 +115,13 @@ function getRating(){
         for(var i = 0; i < 5; i++){
             starRatingList[i] = document.getElementById(ratingNumbers[i] + "-star-text");
             //console.log(starRatingList[i]);
+            var currentNumber = starRatingList[i].innerHTML;
+            var newNumber = ratingPerStar[i];
             
-            starRatingList[i].innerHTML = ratingPerStar[i];
+            if(newNumber != currentNumber){
+                starRatingList[i].innerHTML = newNumber;
+            }
+            
         }
 
         avrageRating = ratingHelp / totalRatings;
