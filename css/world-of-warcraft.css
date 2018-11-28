@@ -18,7 +18,7 @@
 
 .game-info {
   width: 100%;
-  background-color: #f00300;
+  background-color: #00264e;
   margin-right: 20px;
   color: white; }
 
@@ -32,6 +32,8 @@
   font-size: 20px;
   font-weight: bold;
   width: fit-content; }
+  .cat-text a {
+    color: lightgray; }
   .cat-text__cnt {
     margin-left: 5px;
     width: fit-content;
@@ -53,12 +55,14 @@
 
 .game-text__holder {
   position: relative;
-  background-image: url("../img/game-img/red-dead-redemption-2.png");
+  background-image: url("../img/game-img/world-of-warcraft.PNG");
   height: 25vw;
   width: 100%;
   background-position: top;
   background-size: cover;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center; }
   .game-text__holder img {
     height: 75%; }
 
@@ -114,4 +118,4 @@
     height: 100%;
     width: 100%; }
 
-/*# sourceMappingURL=red-dead-redemtion2.css.map */
+/*# sourceMappingURL=world-of-warcraft.css.map */

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/fallout-4.css">
     <title>Home</title>
 </head>
 <body>
@@ -40,12 +41,141 @@
         </div>
     </header>
 
-    <h1 class="construction">Fallout 4</h1>
+    <div class="background">
+        <div class="main" id="fallout-4">
+            <div class="game-text__holder">
+                <img class="game-text" src="../img/game-img/fallout-4-logo.png">
+            </div>
+
+            <div class="game-cnt">
+
+                <div class="game-info">
+                    <div class="header">
+                        Game Info
+                    </div >
+                    
+                    <div class="cat-text">
+                        Developer: 
+                        <a class="cat-text__cnt" href="https://bethesdagamestudios.com/">Bethesda Game Studios</a>
+                    </div>
+
+                    <div class="cat-text">
+                        Publisher:
+                        <a class="cat-text__cnt" href="https://bethesda.net/en/dashboard">Bethesda Softworks</a>
+                    </div>
+
+                    <div class="cat-text">
+                        Genre:
+                        <div class="cat-text__cnt">Action role-playing</div>
+                    </div>
+                    
+                    <div class="cat-text">
+                        Players:
+                        <div class="cat-text__cnt">Single player</div>
+                    </div>
+                    
+                    <div class="cat-text">
+                        Release:
+                        <div class="cat-text__cnt">November 10, 2015</div>
+                    </div>
+
+                    <div class="cat-text">
+                        Platforms:
+                        <div class="cat-text__cnt">
+                            <div class="cat-text__cnt cat-text__cnt--pc">PC</div>
+                            <div class="cat-text__cnt cat-text__cnt--ps4">PS4</div>
+                            <div class="cat-text__cnt cat-text__cnt--xbox">Xbox</div>
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rating">
+                    <div class="star-rating">
+                        <button class="star" id="star-one" onclick="submitRating()" onmouseover="starRating(1)">☆</button><button 
+                        class="star" id="star-two" onclick="submitRating()" onmouseover="starRating(2)">☆</button><button 
+                        class="star" id="star-three" onclick="submitRating()" onmouseover="starRating(3)">☆</button><button 
+                        class="star" id="star-four" onclick="submitRating()" onmouseover="starRating(4)">☆</button><button 
+                        class="star" id="star-five" onclick="submitRating()" onmouseover="starRating(5)">☆</button>
+                    </div>
+
+                    <div id="rating-value" clsss="rating-value">
+                    </div>
+
+                    <div clsss="rating-result">
+                        <span id="rating-result__text">
+                            Current Rating: Loading...
+                        </span>
+                        <div class="star-rating-result">
+                            <div id="star-rating__text" class="star-rating__text">
+                                <ul>
+                                    <li>
+                                        <div class="star-result one-star">
+                                            1. ★
+                                        </div><div class="star-result two-star">
+                                            2. ★★
+                                        </div><div class="star-result three-star">
+                                            3. ★★★
+                                        </div><div class="star-result four-star">
+                                            4. ★★★★
+                                        </div><div class="star-result five-star">
+                                            5. ★★★★★
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="star-rating-result__text">
+                                <ul>
+                                    <li>
+                                        <div class="star-result-item one-star-text" id="one-star-text">
+                                            Loading...
+                                        </div><div class="star-result-item two-star-text" id="two-star-text">
+                                            Loading...
+                                        </div><div class="star-result-item three-star-text" id="three-star-text">
+                                            Loading...
+                                        </div><div class="star-result-item four-star-text" id="four-star-text">
+                                            Loading...
+                                        </div><div class="star-result-item five-star-text" id="five-star-text">
+                                            Loading...
+                                        </div>  
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="test2" clsss="rating-value">
+                        Current Entries: Loading...
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-img">
+                <img src="../img/game-img/fallout-4.png">
+            </div>
+        </div>
+    </div>
+
     <footer>
         <div class="footer__logo">
             <p>Copyright &copy; 2018 The Rare Banana</p>
         </div>
     </footer> 
     <script src="../scripts/global.js"></script>
+    <script src="../scripts/rating.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+        apiKey: "AIzaSyDAs-PQ-7JcjLbuknp8G17Gs5iRPzVfOEI",
+        authDomain: "the-rare-banana.firebaseapp.com",
+        databaseURL: "https://the-rare-banana.firebaseio.com",
+        projectId: "the-rare-banana",
+        storageBucket: "the-rare-banana.appspot.com",
+        messagingSenderId: "366223492487"
+        };
+        firebase.initializeApp(config);
+    </script>
 </body>
 </html>
