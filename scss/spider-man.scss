@@ -12,6 +12,7 @@
 .rating{
     width: fit-content;
     height: fit-content;
+    min-width: 340px;
 }
 
 .game-text{
@@ -178,6 +179,10 @@
 
         .star-rating__text{
             width: 200px;
+        }
+
+        .rating{
+            min-width: 200px;
         }
     }
 }

@@ -12,6 +12,7 @@
 .rating{
     width: fit-content;
     height: fit-content;
+    min-width: 340px;
 }
 
 .game-text{
@@ -27,6 +28,10 @@
     background-color: #c64027;
     margin-right: 20px;
     color: white;
+
+    a{
+        color: wheat;
+    }
 }
 
 .header{
@@ -66,7 +71,17 @@
             padding: 0px 5px;
         }
     }
+
+    &--dev{
+        float: left;
+        display: flex;
+    }
 }
+
+.cat-text__text-holder{
+    display: block;
+}
+
 
 .game-text__holder{
     position: relative;
@@ -158,6 +173,15 @@
             height: 100%;
         }
 
+        .cat-text__text-holder{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cat-text__cnt--dev{
+            max-width: 200px;
+        }
+
         .main{
             width: 100%;
         }
@@ -173,6 +197,10 @@
 
         .star-rating__text{
             width: 200px;
+        }
+
+        .rating{
+            min-width: 200px;
         }
     }
 }
