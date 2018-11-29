@@ -76,7 +76,8 @@
   body .game__list__img-holder {
     width: 40%; }
   body .game-name {
-    font-size: large; }
+    font-size: large;
+    max-width: 200px; }
   body .system__list {
     font-size: 11px; }
   body .game__item {
