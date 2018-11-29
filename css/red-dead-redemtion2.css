@@ -56,7 +56,7 @@
   background-image: url("../img/game-img/red-dead-redemption-2.png");
   height: 25vw;
   width: 100%;
-  background-position: top;
+  background-position: 0px -59px;
   background-size: cover;
   margin-bottom: 20px; }
   .game-text__holder img {
