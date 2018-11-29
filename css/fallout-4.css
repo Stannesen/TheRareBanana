@@ -58,7 +58,9 @@
   width: 100%;
   background-position: center;
   background-size: cover;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center; }
   .game-text__holder img {
     height: 75%; }
 
@@ -113,5 +115,18 @@
   .game-img img {
     height: 100%;
     width: 100%; }
+
+@media screen and (max-width: 1020px) {
+  body .game-text__holder img {
+    height: 100%; }
+  body .main {
+    width: 100%; }
+  body .game-cnt {
+    display: block; }
+  body .game-info {
+    padding-bottom: 10px;
+    margin-bottom: 10px; }
+  body .star-rating__text {
+    width: 200px; } }
 
 /*# sourceMappingURL=fallout-4.css.map */

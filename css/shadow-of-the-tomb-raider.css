@@ -112,4 +112,17 @@
     height: 100%;
     width: 100%; }
 
+@media screen and (max-width: 1020px) {
+  body .game-text__holder img {
+    height: 100%; }
+  body .main {
+    width: 100%; }
+  body .game-cnt {
+    display: block; }
+  body .game-info {
+    padding-bottom: 10px;
+    margin-bottom: 10px; }
+  body .star-rating__text {
+    width: 200px; } }
+
 /*# sourceMappingURL=shadow-of-the-tomb-raider.css.map */

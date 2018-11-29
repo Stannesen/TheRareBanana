@@ -80,6 +80,8 @@
   body .system__list {
     font-size: 11px; }
   body .game__item {
-    margin-bottom: 0px; } }
+    margin-bottom: 0px; }
+  body .game__img-holder {
+    width: 40%; } }
 
 /*# sourceMappingURL=games.css.map */
