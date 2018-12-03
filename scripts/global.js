@@ -16,6 +16,17 @@ function mobileMenu(){
     }
 }
 
+function mobileDropdownTools(){
+    var mobileDropdownHolder = document.getElementById("mobile-menu__dropdown-cnt");
+    var currentDisplay = mobileDropdownHolder.style.display;
+
+    if(currentDisplay == "block"){
+        mobileDropdownHolder.style.display = "none";
+    }else{
+        mobileDropdownHolder.style.display = "block";
+    }
+}
+
 /*
 
 //dropdownButton.addEventListener("mouseover", dropdown);

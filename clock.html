@@ -10,16 +10,53 @@
 </head>
 <body>
     <header>
-        <img class="logo" src="img/top-logo.png">
-        <div class="nav">
-            <div class="nav__cnt">
-                <ul>
-                    <li><a class="menu__item" href="index.html">Home</a>
-                        <a class="menu__item" href="about.html">about</a>
-                        <a class="menu__item" href="games.html">Games</a>
-                        <a class="menu__item menu__item--current" href="clock.html">clock</a></li>
-                </ul>
+        <div class="top-bar">
+            <button class="mobile-menu" onclick="mobileMenu()">
+                <img class="mobile-menu--img" src="img/mobile-menu-button.png">
+            </button>
+            <div class="logo">
+                <img class="logo__img" src="img/top-logo-test.png" onclick="logoClick()">
+                <div class="nav">
+                    <div class="nav__cnt">
+                        <ul>
+                            <li class="nav__cnt__list" >
+                                <a class="menu__item menu__item--current" href="index.html">Home</a>
+                            <li class="nav__cnt__list" >
+                                <a class="menu__item" href="about.html">about</a>
+                            <li class="nav__cnt__list" >
+                                <a class="menu__item" href="games.html">Games</a>
+                            <li class="nav__cnt__list">
+                                <div class="dropdown">
+                                    <button id="dropdown__btn" onclick="myFunction()" class="dropbtn menu__item">Tools <i class="down"></i></button>
+                                    <div id="myDropdown" class="dropdown-content">
+                                        <a href="time-converter.html">Time Converter</a>
+                                        <a href="clock.html">Clock</a>
+                                    </div>
+                                </div>
+
+                            </li></li></li></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
+        </div>
+
+        <div id="mobile-nav" class="mobile-nav">
+            <ul>
+                <li class="mobile-nav__list"><a class="mobile-menu__item" href="index.html">Home</a>
+                    <a class="mobile-menu__item" href="about.html">about</a>
+                    <a class="mobile-menu__item" href="games.html">Games</a>
+                    <div class="mobile-menu__item mobile-menu__innerDropdown">
+                        <button class="mobile-menu__item mobile-menu__innerBtn" onclick="mobileDropdownTools()">Tools <i class="down"></i></button>
+                        <ul>
+                            <li id="mobile-menu__dropdown-cnt" class="mobile-nav__innerList">
+                                <a class="mobile-menu__innerItem" href="time-converter.html">Time Converter</a>
+                                <a class="mobile-menu__innerItem" href="clock.html">Clock</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
         </div>
     </header>
 

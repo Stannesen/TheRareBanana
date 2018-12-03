@@ -27,9 +27,10 @@
                                 <a class="menu__item" href="games.html">Games</a>
                             <li class="nav__cnt__list">
                                 <div class="dropdown">
-                                    <button id="dropdown__btn" onclick="myFunction()" class="dropbtn menu__item">Dropdown <i class="down"></i></button>
+                                    <button id="dropdown__btn" onclick="myFunction()" class="dropbtn menu__item">Tools <i class="down"></i></button>
                                     <div id="myDropdown" class="dropdown-content">
                                         <a href="time-converter.html">Time Converter</a>
+                                        <a href="clock.html">Clock</a>
                                     </div>
                                 </div>
 
@@ -46,10 +47,11 @@
                     <a class="mobile-menu__item" href="about.html">about</a>
                     <a class="mobile-menu__item" href="games.html">Games</a>
                     <div class="mobile-menu__item mobile-menu__innerDropdown">
-                        <button class="mobile-menu__item mobile-menu__innerBtn">Dropdown</button>
+                        <button class="mobile-menu__item mobile-menu__innerBtn" onclick="mobileDropdownTools()">Tools <i class="down"></i></button>
                         <ul>
-                            <li class="mobile-nav__list">
-                                <a class="mobile-menu__item" href="about.html">about</a>
+                            <li id="mobile-menu__dropdown-cnt" class="mobile-nav__innerList">
+                                <a class="mobile-menu__innerItem" href="time-converter.html">Time Converter</a>
+                                <a class="mobile-menu__innerItem" href="clock.html">Clock</a>
                             </li>
                         </ul>
                     </div>
@@ -65,9 +67,14 @@
             </div>
             <input type="number" id="time-input" value="0">
             <select id="convert-from__select">
+                <option class="convert-from__item" value="picosecond">Picosecond</option>
+                <option class="convert-from__item" value="nanosecond">Nanosecond</option>
+                <option class="convert-from__item" value="shake">Shake</option>
+                <option class="convert-from__item" value="microsecond">Microsecond</option>
                 <option class="convert-from__item" value="millisecond">Millisecond</option>
                 <option selected="selected" class="convert-from__item" value="second">Second</option>
                 <option class="convert-from__item" value="minute">Minute</option>
+                <option class="convert-from__item" value="kilosecond">Kilosecond</option>
                 <option class="convert-from__item" value="hour">Hour</option>
                 <option class="convert-from__item" value="day">Day</option>
                 <option class="convert-from__item" value="week">Week</option>
@@ -75,9 +82,14 @@
             
             <ul class="convertet-results">
                 <li>
+                    <div class="result result-picosecond">Picosecond: 0</div>
+                    <div class="result result-nanosecond">Nanosecond: 0</div>
+                    <div class="result result-shake">Shake: 0</div>
+                    <div class="result result-microsecond">Microsecond: 0</div>
                     <div class="result result-millisecond">Millisecond: 0</div>
                     <div class="result result-second">Second: 0</div>
                     <div class="result result-minute">Minute: 0</div>
+                    <div class="result result-kilosecond">kilosecond: 0</div>
                     <div class="result result-hour">Hour: 0</div>
                     <div class="result result-day">Day: 0</div>
                     <div class="result result-week">Week: 0</div>

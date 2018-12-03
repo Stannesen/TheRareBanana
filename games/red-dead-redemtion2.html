@@ -25,8 +25,16 @@
                                 <a class="menu__item" href="../about.html">about</a>
                             <li class="nav__cnt__list" >
                                 <a class="menu__item" href="../games.html">Games</a>
-                            <li class="nav__cnt__list" >
-                                <a class="menu__item" href="../time-converter.html">Time Converter</a></li></li></li></li>
+                            <li class="nav__cnt__list">
+                                <div class="dropdown">
+                                    <button id="dropdown__btn" onclick="myFunction()" class="dropbtn menu__item">Tools <i class="down"></i></button>
+                                    <div id="myDropdown" class="dropdown-content">
+                                        <a href="time-converter.html">Time Converter</a>
+                                        <a href="clock.html">Clock</a>
+                                    </div>
+                                </div>
+
+                            </li></li></li></li>
                         </ul>
                     </div>
                 </div>
@@ -38,7 +46,15 @@
                 <li class="mobile-nav__list"><a class="mobile-menu__item" href="../index.html">Home</a>
                     <a class="mobile-menu__item" href="../about.html">about</a>
                     <a class="mobile-menu__item" href="../games.html">Games</a>
-                    <a class="mobile-menu__item" href="../time-converter.html">Time Converter</a>
+                    <div class="mobile-menu__item mobile-menu__innerDropdown">
+                        <button class="mobile-menu__item mobile-menu__innerBtn" onclick="mobileDropdownTools()">Tools <i class="down"></i></button>
+                        <ul>
+                            <li id="mobile-menu__dropdown-cnt" class="mobile-nav__innerList">
+                                <a class="mobile-menu__innerItem" href="../time-converter.html">Time Converter</a>
+                                <a class="mobile-menu__innerItem" href="../clock.html">Clock</a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
             </ul>
         </div>
