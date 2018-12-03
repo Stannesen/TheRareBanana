@@ -2,15 +2,19 @@ var input = document.getElementById("time-input");
 
 var resultObj = document.getElementsByClassName("result");
 var convertFromItem = document.getElementsByClassName("convert-from__item");
+var convertFromSelecObj = document.getElementById("convert-from__select");
 
 var timeList = [];
 var units = ["Millisecond", "Secund", "Minute", "Hour", "Day", "week"];
 var unitsValue = [0.001, 1, 60, 3600, 86400, 604800];
 
 var result = [""];
-var resultName = []
+var resultName = [];
 
-input.oninput = function(){
+convertFromSelecObj.addEventListener("change", convertTime);
+input.addEventListener("input", convertTime);
+
+function convertTime(){
     var convertFromIndexObj = document.getElementById("convert-from__select").selectedIndex;
     var convertFromValueObj = document.getElementById("convert-from__select").options;
 
