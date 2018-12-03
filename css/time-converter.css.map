@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,KAAK;EACD,KAAK,EAAE,GAAG;;AAGd,WAAW;EACP,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,MAAM;;AAG3B,kBAAkB;EACd,UAAU,EAAE,IAAI",
+"sources": ["../scss/time-converter.scss"],
+"names": [],
+"file": "time-converter.css"
+}

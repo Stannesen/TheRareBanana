@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/time-converter.css">
     <title>Home</title>
 </head>
 <body>
@@ -45,13 +45,40 @@
         </div>
     </header>
 
-    <h1 class="construction">this page is under construction</h1>
+    <div class="background">
+        <div class="main">
+            <div class="time-display">
+                Please Enter A Time
+            </div>
+            <input type="number" id="time-input" value="0">
+            <select id="convert-from__select">
+                <option class="convert-from__item" value="millisecond">Millisecond</option>
+                <option selected="selected" class="convert-from__item" value="second">Second</option>
+                <option class="convert-from__item" value="minute">Minute</option>
+                <option class="convert-from__item" value="hour">Hour</option>
+                <option class="convert-from__item" value="day">Day</option>
+                <option class="convert-from__item" value="week">Week</option>
+            </select>
+            
+            <ul class="convertet-results">
+                <li>
+                    <div class="result result-millisecond">Millisecond: 0</div>
+                    <div class="result result-second">Second: 0</div>
+                    <div class="result result-minute">Minute: 0</div>
+                    <div class="result result-hour">Hour: 0</div>
+                    <div class="result result-day">Day: 0</div>
+                    <div class="result result-week">Week: 0</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
     <footer>
         <div class="footer__logo">
             <p>Copyright &copy; 2018 The Rare Banana</p>
         </div>
     </footer> 
-    <script src="scripts/about.js"></script>
+    <script src="scripts/time-converter.js"></script>
     <script src="scripts/global.js"></script>
 </body>
 </html>

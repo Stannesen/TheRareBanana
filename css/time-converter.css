@@ -1,0 +1,11 @@
+.main {
+  width: 80%; }
+
+.background {
+  display: flex;
+  justify-content: center; }
+
+.convertet-results {
+  list-style: none; }
+
+/*# sourceMappingURL=time-converter.css.map */
