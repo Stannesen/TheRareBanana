@@ -45,15 +45,17 @@ i {
   display: none;
   position: absolute;
   min-width: inherit;
+  width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1; }
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block; }
+  z-index: 1;
+  background-color: azure;
+  padding-top: 5px; }
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    height: fit-content; }
 
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
@@ -61,6 +63,9 @@ i {
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {
+  display: block; }
+
+.dropdown:hover .dropdown-content {
   display: block; }
 
 .nav__cnt__list {
@@ -87,6 +92,16 @@ i {
     display: block;
     height: 10vw;
     width: 10vw; }
+  .mobile-menu__item {
+    display: block;
+    border-top: 1px solid white;
+    font-family: "Times New Roman", Times, serif;
+    font-style: normal;
+    font-size: 5vw;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: unset;
+    padding: 14px 15px 15px; }
 
 .mobile-nav {
   display: none;
@@ -99,18 +114,16 @@ i {
     margin: 0; }
   .mobile-nav__list {
     list-style-type: none; }
-    .mobile-nav__list a {
-      display: block;
-      border-top: 1px solid white;
-      font-family: "Times New Roman", Times, serif;
-      font-style: normal;
-      font-size: 5vw;
-      text-transform: uppercase;
-      color: white;
-      text-decoration: unset;
-      padding: 14px 15px 15px; }
     .mobile-nav__list:last-child {
       border-bottom: 1px solid white; }
+
+.mobile-menu__innerDropdown {
+  padding: 0px 0px 15px; }
+
+.mobile-menu__innerBtn {
+  background-color: black;
+  color: white;
+  border: none; }
 
 .top-bar {
   display: block; }

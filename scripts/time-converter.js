@@ -10,7 +10,6 @@ var unitsValue = [0.001, 1, 60, 3600, 86400, 604800];
 
 var result = [""];
 var resultName = [];
-
 convertFromSelecObj.addEventListener("change", convertTime);
 input.addEventListener("input", convertTime);
 

@@ -1,3 +1,6 @@
+var dropdownButton = document.getElementById("dropdown__btn");
+var dropdownCnt = document.getElementById("myDropdown");
+
 function logoClick(){
     window.location.href = "../index.html"
 }
@@ -13,9 +16,28 @@ function mobileMenu(){
     }
 }
 
+/*
 
-/* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
+//dropdownButton.addEventListener("mouseover", dropdown);
+dropdownButton.onmouseover = function(){
+    dropdownCnt.style.display = "block";
+
+};
+
+dropdownCnt.onmouseout = function(){
+    dropdownCnt.style.display = "none";
+};
+
+dropdownButton.onmouseout = function(){
+    //dropdownCnt.style.display = "none";
+};
+
+function dropdown(){
+    console.log("Hei");
+}
+
+
+/*
 function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
 }
@@ -34,3 +56,4 @@ window.onclick = function(event) {
     }
   }
 }
+*/
