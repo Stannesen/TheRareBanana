@@ -65,34 +65,63 @@
             <div class="time-display">
                 Please Enter A Time
             </div>
-            <input type="number" id="time-input" value="0">
-            <select id="convert-from__select">
+            <input type="number" id="time-input" value="1">
+
+            <select id="si-select">
+                <option class="si-select__item" value="siUnits">SI Units</option>
+                <option selected="selected" class="si-select__item" value="noneSiUnits">None SI Units</option>
+            </select>
+
+            <select id="convert-from__siSelect">
+                <option class="convert-from__item" value="decisecond">Decisecond</option>
                 <option class="convert-from__item" value="picosecond">Picosecond</option>
-                <option class="convert-from__item" value="nanosecond">Nanosecond</option>
-                <option class="convert-from__item" value="shake">Shake</option>
-                <option class="convert-from__item" value="microsecond">Microsecond</option>
                 <option class="convert-from__item" value="millisecond">Millisecond</option>
+                <option class="convert-from__item" value="microsecond">Microsecond</option>  
+                <option class="convert-from__item" value="nanosecond">Nanosecond</option>
+                <option class="convert-from__item" value="picosecond">Picosecond</option>
+                <option class="convert-from__item" value="femtosecond">Femtosecond</option>
+                <option class="convert-from__item" value="attosecond">Attosecond</option>
+                <option class="convert-from__item" value="zeptosecond">Zeptosecond</option>
+                <option class="convert-from__item" value="yoctosecond">Yoctosecond</option> 
+            </select>
+
+            <select id="convert-from__nonSiSelect">
                 <option selected="selected" class="convert-from__item" value="second">Second</option>
                 <option class="convert-from__item" value="minute">Minute</option>
-                <option class="convert-from__item" value="kilosecond">Kilosecond</option>
                 <option class="convert-from__item" value="hour">Hour</option>
                 <option class="convert-from__item" value="day">Day</option>
                 <option class="convert-from__item" value="week">Week</option>
+                <option class="convert-from__item" value="commonYear">Common Year</option>
+                <option class="convert-from__item" value="leapYear">Leap Year</option>
             </select>
             
             <ul class="convertet-results">
-                <li>
-                    <div class="result result-picosecond">Picosecond: 0</div>
-                    <div class="result result-nanosecond">Nanosecond: 0</div>
-                    <div class="result result-shake">Shake: 0</div>
-                    <div class="result result-microsecond">Microsecond: 0</div>
-                    <div class="result result-millisecond">Millisecond: 0</div>
-                    <div class="result result-second">Second: 0</div>
-                    <div class="result result-minute">Minute: 0</div>
-                    <div class="result result-kilosecond">kilosecond: 0</div>
-                    <div class="result result-hour">Hour: 0</div>
-                    <div class="result result-day">Day: 0</div>
-                    <div class="result result-week">Week: 0</div>
+                <li class="convertet-list">
+                    <div class="siUnits">
+                        <div class="header">Si Units</div>
+                        <div id="decisecond" class="result">Decisecond: 0</div>
+                        <div id="centisecond" class="result">Centisecond: 0</div>
+                        <div id="millisecond" class="result">Millisecond: 0</div>
+                        <div id="microsecond" class="result">Microsecond: 0</div>
+                        <div id="nanosecond" class="result">Nanosecond: 0</div>
+                        <div id="picosecond" class="result">Picosecond: 0</div>
+                        <div id="femtosecond" class="result">Femtosecond: 0</div>
+                        <div id="attosecond" class="result">Attosecond: 0</div>
+                        <div id="zeptosecond" class="result">Zeptosecond: 0</div>
+                        <div id="yoctosecond" class="result">Yoctosecond: 0</div>
+                    </div>
+                    
+                    <div class="siUnits">
+                        <div id="second" class="result">Second: 0</div>
+                        <div id="minute" class="result">Minute: 0</div>
+                        <div id="kilosecond" class="result">Kilosecond: 0</div>
+                        <div id="hour" class="result">Hour: 0</div>
+                        <div id="day" class="result">Day: 0</div>
+                        <div id="week" class="result">Week: 0</div>
+                        <div id="megasecond" class="result">megasecond</div>
+                        <div id="commonYear" class="result">Common Year: 0</div>
+                        <div id="leapYear" class="result">Leap Year: 0</div>
+                    </div>
                 </li>
             </ul>
         </div>

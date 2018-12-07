@@ -66,6 +66,23 @@
                 If you can see this message, your browser does not support canvas 
                 and needs an update. Sorry. :(
             </canvas>
+
+            <div class="clock">
+                <div class="clock__text">
+                    <div class="time__text time__text--top">
+                        Current Time
+                    </div>
+                    <div id="digitalText" class="time__text time__text--cnt">
+                    </div>
+                    <div id="currentDate" class="time__text time__text--cnt">
+                    </div>
+                    <div id="currentDay" class="time__text time__text--cnt">
+                    </div>
+                    <div id="weekNr" class="time__text time__text--cnt">
+                    </div>
+                </div>
+                
+            </div>
         </div>
         
     </div>
@@ -75,7 +92,8 @@
         <p id="digitalText">Hey</p>
     </div>
 
-    <script src = scripts/clock.js>    
-    </script>
+    <script src = scripts/clock.js></script>
+    <script src="scripts/global.js"></script>
+
 </body>
 </html>
