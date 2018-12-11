@@ -191,6 +191,20 @@ canvas#clock {
 @media screen and (max-width: 1020px) {
   .grid-container .grid-item {
     width: 97%;
-    height: 50vw; } }
+    height: 50vw; }
+
+  .converter__choose {
+    font-size: 10px;
+    height: 20px; }
+
+  .converter-box {
+    margin-right: 2vw; }
+    .converter-box:last-child {
+      margin-left: 2vw; }
+    .converter-box input {
+      font-size: 20px; }
+
+  .equal {
+    margin-top: auto; } }
 
 /*# sourceMappingURL=home.css.map */
