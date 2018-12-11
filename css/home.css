@@ -111,10 +111,22 @@ canvas#clock {
 .clock__digital {
   color: blue; }
 
+.converter__text {
+  text-align: center;
+  margin-top: 5px; }
+
 .grid-tiem__time-converter {
   width: 64.3333%; }
 
-.time-converter-holder {
+.converter__choose {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 10px;
+  font-size: 30px; }
+  .converter__choose option {
+    text-align: center; }
+
+.converter__holder {
   display: flex; }
 
 .converter-box {

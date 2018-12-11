@@ -109,9 +109,30 @@
                         </div>
                     </div><div class="grid-item grid-tiem__time-converter">
                         <div id="time-converter-holder" class="time-converter-holder">
-                            <div class="converter-box">
-                                <input type="number" @input="onEdit(0)" v-model="fromValue"/>
-                                <select v-model="from">
+                            <h1 class="converter__text">Converter</h1>
+                            <select class="converter__choose">
+                                <option>Time</option>
+                            </select>
+
+                            <div class="converter__holder">
+                                <div class="converter-box">
+                                    <input type="number" @input="onEdit(0)" v-model="fromValue"/>
+                                    <select v-model="from">
+                                            <option value="nanosecond">Nanosecond</option>
+                                            <option value="microsecond">Microsecond</option>
+                                            <option value="millisecond">Millisecond</option>
+                                            <option selected="selected" value="second">Second</option>
+                                            <option value="minute">Minute</option>
+                                            <option value="hour">Hour</option>
+                                            <option value="day">Day</option>
+                                    </select>
+                                </div>
+
+                                <p class="equal">=</p>
+                
+                                <div class="converter-box">
+                                    <input type="number" @input="onEdit(1)" v-model="convertetValue">
+                                    <select v-model="to">
                                         <option value="nanosecond">Nanosecond</option>
                                         <option value="microsecond">Microsecond</option>
                                         <option value="millisecond">Millisecond</option>
@@ -119,23 +140,8 @@
                                         <option value="minute">Minute</option>
                                         <option value="hour">Hour</option>
                                         <option value="day">Day</option>
-                                </select>
-                                <p>From = {{ fromValue }} <br> 
-                                    Calculate = {{  }}
-                                </p>
-                            </div>
-            
-                            <div class="converter-box">
-                                <input type="number" @input="onEdit(1)" v-model="convertetValue">
-                                <select v-model="to">
-                                    <option value="nanosecond">Nanosecond</option>
-                                    <option value="microsecond">Microsecond</option>
-                                    <option value="millisecond">Millisecond</option>
-                                    <option selected="selected" value="second">Second</option>
-                                    <option value="minute">Minute</option>
-                                    <option value="hour">Hour</option>
-                                    <option value="day">Day</option>
-                                </select>
+                                    </select>
+                                </div>
                             </div>
                         </div>
                     </div>
