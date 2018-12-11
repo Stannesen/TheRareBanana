@@ -10,8 +10,12 @@
 </head>
 <body>
     <h1>Testing Vue.js</h1>
+    <p>This is jsut a page where i am testing vue.js</p>
 
     <div id="vue-app">
+        <h1 class="test-text">Vue Test Nr.1</h1>
+
+        <p>Getting value from vue by using {{ }}</p>
         <h2>{{ greet("Afternoon") }}</h1>
         <a v-bind:href="website">The Rare Banana</a>
         <input type="text" v-bind:value="name"/>
@@ -22,14 +26,18 @@
 
 
     <div id="vue-event">
+        <h1 class="test-text">Vue Test Nr.2</h1>
+        <p> </p>
+
         <h2>Event</h1>
+        <p>Using v-on:click, v-on:click.once to change the age</p>
         <h3>Age: {{age}}</h1>
 
-        <button v-on:click.once="add(1)" >Add a Year</button>
+        <button v-on:click.once="add(1)" >Add a Year(only once)</button>
         <button @click="subtract(1)" >Subtract a Year</button>
 
-        <button v-on:dblclick="add(10)" >Add a Year</button>
-        <button @dblclick="subtract(10)" >Subtract a Year</button>
+        <button v-on:dblclick="add(10)" >Add 10 Year on double click</button>
+        <button @dblclick="subtract(10)" >Subtract 10 Year on double click</button>
 
         <div id="canvas" v-on:mousemove="updateXY">{{x}}, {{y}}</div>
         <a v-on:click.prevent="click" href="https://www.therarebanana.com">The Rare Banana</a>
@@ -37,23 +45,28 @@
 
 
     <div id="vue-keyboardEvent">
+        <h1 class="test-text">Vue Test Nr.3</h1>
+
         <h2>Keyboard Event</h1>
-        <label>name:</label>
+        <p>name = enter when done edeting will output in the console, age = alt + enter when done edeting will output in the console</p>
+        <label>Name:</label>
         <input type="text" v-on:keyup.enter="logName" />
         <label>Age:</label>
         <input type="text" v-on:keyup.alt.enter="logAge" />
 
-
         <h2>Two-Way Data Binding</h1>
-        <label>name:</label>
+        <p>Outputing text on change</p>
+        <label>Name:</label>
         <input type="text" v-model="name" />
-        <span>{{name}}</span>
+        <span>Name: {{name}}</span>
         <label>Age:</label>
         <input type="text" v-model="age" />
-        <span>{{age}}</span>
+        <span>Age: {{age}}</span>
     </div>
 
     <div id="vue-computedProperties">
+        <h1 class="test-text">Vue Test Nr.4</h1>
+
         <h2>Computed Properties</h1>
         <button v-on:click="a++">Add to A</button>
         <button v-on:click="b++">Add to B</button>
@@ -70,6 +83,8 @@
     </div>
 
     <div id="vue-dynamicCSS">
+        <h1 class="test-text">Vue Test Nr.5</h1>
+
         <h2>Dynamic CSS</h1>
         <h3>Example 1</h2>
         <div v-on:click="available = !available" v-bind:class="{available: available}">
@@ -82,6 +97,33 @@
         <div v-bind:class="compClasses">
             <span>Arne</span>
         </div>
+    </div>
+
+    <div id="vue-conditionals">
+        <h1 class="test-text">Vue test nr.6</h1>
+
+        <h2>Conditionals</h2>
+        <button v-on:click="error = !error">Toggle Error</button>
+        <button v-on:click="success = !success">Toggle Success</button>
+        <p v-if="error">There has been an error(Using If)</p>
+        <p v-else-if="success">Whoooo, Success(Using else if)</p>
+
+        <p v-show="error">There has been an error(Using Show)</p>
+        <p v-show="success">Whoooo, Success(Using Show)</p>
+    </div>
+
+
+    <div id="vue-loopingWithV-for">
+        <h1 class="test-text">Vue test nr.7</h1>
+
+        <h2>Looping with v-for</h2>
+        <ul>
+            <li v-for="character in characters">{{character}}</li>
+        </ul>
+
+        <ul>
+            <li v-for="(ninja, index) in ninjas">{{index}} . {{ninja.name}} - {{ninja.age}}</li>
+        </ul>
     </div>
     
     <script src="code.js"></script>

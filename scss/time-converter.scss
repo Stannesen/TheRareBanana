@@ -7,9 +7,25 @@
     justify-content: center;
 }
 
+.time-input{
+    width: 200px;
+    font-size: 30px;
+}
+
+.time-converter-holder{
+    display: flex;
+    flex-direction: row;
+}
+
+.converter-box{
+    display: flex;
+    flex-direction: column;
+}
+
 .convertet-results{
     list-style: none;
     display: flex;
+    padding: 0;
 }
 
 .siUnits{
@@ -23,10 +39,29 @@
     }
 }
 
+.noneSiUnits{
+    width: 350px;
+}
+
 .result{
     width: fit-content;
 }
 
 .convertet-list{
     display: flex;
+}
+
+@media screen and (max-width: 1020px) {
+    .main{
+        width: 95%;
+    }
+    .noneSiUnits{
+        width: 100%;
+        margin-bottom: 60px;
+    }    
+
+    .convertet-list{
+        display: block;
+        width: 100px;
+    }
 }

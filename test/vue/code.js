@@ -44,6 +44,7 @@ new Vue({
 });
 
 new Vue({
+    //Vue Test 3
     el: "#vue-keyboardEvent",
     data:{
         name: "",
@@ -112,5 +113,35 @@ new Vue({
                 nearby: this.nearby
             }
         }
+    }
+});
+
+new Vue({
+    el: "#vue-conditionals",
+    data:{
+        error: false,
+        success: false
+    },
+    methods:{
+
+    }
+});
+
+new Vue ({
+    el: "#vue-loopingWithV-for",
+    data:{
+        name: "Arne",
+        characters: ["Mario", "Luigi", "Yoshi", "bowser"],
+        ninjas:[
+            {name: "Ryu", age: 25},
+            {name: "Yoshi", age: 26},
+            {name: "Ken", age: 55}
+        ]
+    },
+    methods:{
+
+    },
+    computed:{
+
     }
 });

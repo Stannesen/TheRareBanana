@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta property="og:image" content="http://www.therarebanana.com/img/the-rare-banana-logo-test-I.png" />
+
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    -->
+
+    <script src="scripts/vue.min.js"></script>
+
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/home.css">
 
@@ -34,9 +41,7 @@
                                         <a href="time-converter.html">Time Converter</a>
                                         <a href="clock.html">Clock</a>
                                     </div>
-                                </div>
-
-                            </li></li></li></li>
+                                </div></li></li></li></li>
                         </ul>
                     </div>
                 </div>
@@ -102,6 +107,37 @@
                                 and needs an update. Sorry. :(
                             </canvas>
                         </div>
+                    </div><div class="grid-item grid-tiem__time-converter">
+                        <div id="time-converter-holder" class="time-converter-holder">
+                            <div class="converter-box">
+                                <input type="number" @input="onEdit(0)" v-model="fromValue"/>
+                                <select v-model="from">
+                                        <option value="nanosecond">Nanosecond</option>
+                                        <option value="microsecond">Microsecond</option>
+                                        <option value="millisecond">Millisecond</option>
+                                        <option selected="selected" value="second">Second</option>
+                                        <option value="minute">Minute</option>
+                                        <option value="hour">Hour</option>
+                                        <option value="day">Day</option>
+                                </select>
+                                <p>From = {{ fromValue }} <br> 
+                                    Calculate = {{  }}
+                                </p>
+                            </div>
+            
+                            <div class="converter-box">
+                                <input type="number" @input="onEdit(1)" v-model="convertetValue">
+                                <select v-model="to">
+                                    <option value="nanosecond">Nanosecond</option>
+                                    <option value="microsecond">Microsecond</option>
+                                    <option value="millisecond">Millisecond</option>
+                                    <option selected="selected" value="second">Second</option>
+                                    <option value="minute">Minute</option>
+                                    <option value="hour">Hour</option>
+                                    <option value="day">Day</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
             </div>
 
@@ -136,6 +172,6 @@
     </footer>    
     <script src="scripts/clock.js"></script>
     <script src="scripts/global.js"></script>
-
+    <script src="scripts/time-converter.js"></script>
 </body>
 </html>

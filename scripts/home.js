@@ -1,3 +1,7 @@
+new vue({
+    el: ""
+});
+
 var pausePlayAniImg = document.getElementById("pausePlayAniImg");
 const galleryImage = document.querySelectorAll(".logo__image");
 
