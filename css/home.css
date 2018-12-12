@@ -129,6 +129,14 @@ canvas#clock {
 .converter__holder {
   display: flex; }
 
+.converterInput {
+  /* For Firefox */
+  -moz-appearance: textfield;
+  /* Webkit browsers like Safari and Chrome */ }
+  .converterInput::-webkit-inner-spin-button, .converterInput::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0; }
+
 .converter-box {
   display: flex;
   flex-direction: column;
@@ -140,7 +148,8 @@ canvas#clock {
     background: lightgray; }
   .converter-box input {
     font-size: 40px;
-    text-align: center; }
+    text-align: center;
+    width: 100%; }
   .converter-box:last-child {
     margin-right: 0;
     margin-left: 30px; }

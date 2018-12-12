@@ -165,6 +165,20 @@ canvas#clock {
     display: flex;
 }
 
+.converterInput{
+    /* For Firefox */
+    
+        -moz-appearance:textfield;
+    
+
+    /* Webkit browsers like Safari and Chrome */
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+}
+
 .converter-box{
     display: flex;
     flex-direction: column;
@@ -180,6 +194,7 @@ canvas#clock {
     input{
         font-size: 40px;
         text-align: center;
+        width: 100%;
     }
 
     &:last-child{

@@ -108,38 +108,32 @@
                             </canvas>
                         </div>
                     </div><div class="grid-item grid-tiem__time-converter">
-                        <div id="time-converter-holder" class="time-converter-holder">
+                        <div id="converter-holder" class="time-converter-holder">
                             <h1 class="converter__text">Converter</h1>
-                            <select class="converter__choose">
-                                <option>Time</option>
+                            <select id="converter__choose" class="converter__choose" v-on:change="changeConverting" v-model="converter">
+                                <option value="time">Time</option>
+                                <option value="length">Length</option>
+                                <option value="mass">Mass</option>
                             </select>
 
                             <div class="converter__holder">
                                 <div class="converter-box">
-                                    <input type="number" @input="onEdit(0)" v-model="fromValue"/>
-                                    <select v-model="from">
-                                            <option value="nanosecond">Nanosecond</option>
-                                            <option value="microsecond">Microsecond</option>
-                                            <option value="millisecond">Millisecond</option>
-                                            <option selected="selected" value="second">Second</option>
-                                            <option value="minute">Minute</option>
-                                            <option value="hour">Hour</option>
-                                            <option value="day">Day</option>
+                                    <input class="converterInput" type="number" @input="onEdit(0)" v-model="fromValue"/>
+                                    <select id="select__from" v-model="from">
+                                        <option v-for="test in testFunc()" v-bind:value="test.id">
+                                            {{test.name}}
+                                        </option>
                                     </select>
                                 </div>
 
                                 <p class="equal">=</p>
                 
                                 <div class="converter-box">
-                                    <input type="number" @input="onEdit(1)" v-model="convertetValue">
-                                    <select v-model="to">
-                                        <option value="nanosecond">Nanosecond</option>
-                                        <option value="microsecond">Microsecond</option>
-                                        <option value="millisecond">Millisecond</option>
-                                        <option selected="selected" value="second">Second</option>
-                                        <option value="minute">Minute</option>
-                                        <option value="hour">Hour</option>
-                                        <option value="day">Day</option>
+                                    <input class="converterInput" type="number" @input="onEdit(1)" v-model="convertetValue">
+                                    <select id="select__to" v-model="to">
+                                        <option v-for="test in testFunc()" v-bind:value="test.id">
+                                            {{test.name}}
+                                        </option>
                                     </select>
                                 </div>
                             </div>
@@ -178,6 +172,6 @@
     </footer>    
     <script src="scripts/clock.js"></script>
     <script src="scripts/global.js"></script>
-    <script src="scripts/time-converter.js"></script>
+    <script src="scripts/converter.js"></script>
 </body>
-</html>
+</html> 
