@@ -119,7 +119,7 @@
                             <div class="converter__holder">
                                 <div class="converter-box">
                                     <input class="converterInput" type="number" @input="onEdit(0)" v-model="fromValue"/>
-                                    <select id="select__from" v-model="from">
+                                    <select id="select__from" v-model="from" v-on:change="changeConvertingValue(0)">
                                         <option v-for="test in testFunc()" v-bind:value="test.id">
                                             {{test.name}}
                                         </option>
@@ -130,7 +130,7 @@
                 
                                 <div class="converter-box">
                                     <input class="converterInput" type="number" @input="onEdit(1)" v-model="convertetValue">
-                                    <select id="select__to" v-model="to">
+                                    <select id="select__to" v-model="to" v-on:change="changeConvertingValue(1)">
                                         <option v-for="test in testFunc()" v-bind:value="test.id">
                                             {{test.name}}
                                         </option>

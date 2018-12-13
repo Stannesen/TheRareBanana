@@ -89,11 +89,34 @@ new Vue ({
             for(var i = 0; i < this.test.length; i++){
                 if(this.test[i].value == 1){
                     this.from = this.test[i].id;
-                    this.to = this.test[i].id;
+                    this.to = this.test[i + 1].id;
                 }
             }
-        }
-    },
+        },
+
+        changeConvertingValue: function(fromToConverter){
+            if(this.from == this.to){
+                for(var i = 0; i < this.test.length; i++){
+                    if(this.test[i].value == 1){
+                        if(fromToConverter == 0){
+                            if(this.test[i].id == this.to){
+                                this.to = (this.test[i + 1].id);
+                            }else{
+                                this.to = this.test[i].id;
+                            }
+                        }else if(fromToConverter == 1){
+                            if(this.test[i].id == this.from){
+                                this.from = (this.test[i + 1].id);
+                                break;
+                            }else{
+                                this.from = (this.test[i].id);
+                            }
+                        }
+                    }
+                }
+            }   
+        }   
+    },  
     watch:{
         from(){
             this.convertetValue = 0;
@@ -109,7 +132,7 @@ new Vue ({
     },
     mounted(){
         this.from = "second";
-        this.to = "second";
+        this.to = "minute";
         this.test = this.values[this.converter]
     }
 });
