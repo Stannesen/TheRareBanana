@@ -42,18 +42,25 @@ new Vue ({
                 {index: 7, name: "Stone", value: 0.157473, id: "stone"},
                 {index: 8, name: "Pound", value: 2.205, id: "pound"},
                 {index: 9, name: "Ounce", value: 35.274, id: "ounce"}
+            ],
+            area: [
+                {index: 0, name: "Square Kilometre", value: 1e-6, id: "squareKilometre"},
+                {index: 1, name: "Square Metre", value: 1, id: "squareMetre"},
+                {index: 2, name: "Square Mile", value: 0.3861003861003861, id: "squareMile"},
+                {index: 3, name: "Square Yard", value: 1.196e+6, id: "squareYard"},
+                {index: 4, name: "Square Foot", value: 1.076e+7, id: "squareFoot"},
+                {index: 5, name: "Square Inch", value: 1.55e+9, id: "squareInch"},
+                {index: 6, name: "Hectare", value: 100, id: "hectare"},
+                {index: 7, name: "Arce", value:  247.105, id: "arce"}
             ]
         }
-        
-
     },
+
     methods:{
         onEdit: function(input){
             if(input == 0){
-                this.convertetValue = 0;
                 this.convertetValue = this.calculate(this.from, this.to, this.fromValue);
             }else{
-                this.fromValue = 0;
                 this.fromValue = this.calculate(this.to, this.from, this.convertetValue);
             }
         },
@@ -63,7 +70,6 @@ new Vue ({
             var fromIndex = 0;
             var toIndex = 0;
             var currentConverter = this.test;
-            
             
             for(var i = 0; i < currentConverter.length; i++){
                 if(currentConverter[i].id == from){
@@ -80,7 +86,6 @@ new Vue ({
         
         testFunc: function(){
             return this.test;
-            
         },
 
         changeConverting: function(){

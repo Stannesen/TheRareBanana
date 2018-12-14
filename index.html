@@ -38,6 +38,7 @@
                                 <div class="dropdown">
                                     <button id="dropdown__btn" onclick="myFunction()" class="dropbtn menu__item">Tools <i class="down"></i></button>
                                     <div id="myDropdown" class="dropdown-content">
+                                        <div class="more__">Converter</div>
                                         <a href="time-converter.html">Time Converter</a>
                                         <a href="clock.html">Clock</a>
                                     </div>
@@ -70,7 +71,7 @@
     <div class="background">
         <div class="main">
             <h1 class="page-text">
-                Home
+                Thank you for visiting <a href="https://www.therarebanana.com/">therarebanana.com</a>
             </h1>
 
             <div id="grid-container" class="grid-container">
@@ -91,77 +92,56 @@
                         </div>
                         
                     </div>
-                </div><div class="grid-item grid-item--top-games">
-                        <div class="top-games__cnt">
-                            <div class="text-holder">
-                                Top Games
-                            </div>
-                            
-                            <div class="top-games__img-holder">
-                            </div>
-                        </div>
-                    </div><div class="grid-item gird-item--analog-clock">
-                        <div class="analog-clock">
-                            <canvas id="clock" width="50" height="50">
-                                If you can see this message, your browser does not support canvas 
-                                and needs an update. Sorry. :(
-                            </canvas>
-                        </div>
-                    </div><div class="grid-item grid-tiem__time-converter">
-                        <div id="converter-holder" class="time-converter-holder">
-                            <h1 class="converter__text">Converter</h1>
-                            <select id="converter__choose" class="converter__choose" v-on:change="changeConverting" v-model="converter">
-                                <option value="time">Time</option>
-                                <option value="length">Length</option>
-                                <option value="mass">Mass</option>
-                            </select>
+                </div><div class="grid-item grid-tiem__time-converter">
+                    <div id="converter-holder" class="time-converter-holder">
+                        <h1 class="converter__text">Converter</h1>
+                        <select id="converter__choose" class="converter__choose" v-on:change="changeConverting" v-model="converter">
+                            <option value="time">Time</option>
+                            <option value="length">Length</option>
+                            <option value="mass">Mass</option>
+                            <option value="area">Area</option>
+                        </select>
 
-                            <div class="converter__holder">
-                                <div class="converter-box">
-                                    <input class="converterInput" type="number" @input="onEdit(0)" v-model="fromValue"/>
-                                    <select id="select__from" v-model="from" v-on:change="changeConvertingValue(0)">
-                                        <option v-for="test in testFunc()" v-bind:value="test.id">
-                                            {{test.name}}
-                                        </option>
-                                    </select>
-                                </div>
+                        <div class="converter__holder">
+                            <div class="converter-box">
+                                <input class="converterInput" type="number" @input="onEdit(0)" v-model="fromValue"/>
+                                <select id="select__from" v-model="from" v-on:change="changeConvertingValue(0)">
+                                    <option v-for="test in testFunc()" v-bind:value="test.id">
+                                        {{test.name}}
+                                    </option>
+                                </select>
+                            </div>
 
-                                <p class="equal">=</p>
-                
-                                <div class="converter-box">
-                                    <input class="converterInput" type="number" @input="onEdit(1)" v-model="convertetValue">
-                                    <select id="select__to" v-model="to" v-on:change="changeConvertingValue(1)">
-                                        <option v-for="test in testFunc()" v-bind:value="test.id">
-                                            {{test.name}}
-                                        </option>
-                                    </select>
-                                </div>
+                            <p class="equal">=</p>
+            
+                            <div class="converter-box">
+                                <input class="converterInput" type="number" @input="onEdit(1)" v-model="convertetValue">
+                                <select id="select__to" v-model="to" v-on:change="changeConvertingValue(1)">
+                                    <option v-for="test in testFunc()" v-bind:value="test.id">
+                                        {{test.name}}
+                                    </option>
+                                </select>
                             </div>
                         </div>
                     </div>
-            </div>
-
-            <!--
-            <div class="image-changing">
-                <button class="arrow__holder arrow__holder--left" onclick="changeImage(-1), resetInterval()" >
-                    <img class="arrow__item arrow__item--left" src="img/arrow.png">
-                </button>
-
-                <button class="pause-button" onclick="toggleInterval()">
-                    <img class="pause-button__img" id="pausePlayAniImg" src="img/pause-button.png">
-                </button> 
-
-                <div class="img__holder" id="imgHolder">
-                    <img class="logo__image logo__image--current" src="img/the-rare-banana-logo-test-I.png">
-                    <img class="logo__image" src="img/the-rare-banana-logo-test-II.png">
-                    <img class="logo__image" src="img/the-rare-banana-logo-test-III.png">
+                </div><div class="grid-item gird-item--analog-clock">
+                    <div class="analog-clock">
+                        <canvas id="clock" width="50" height="50">
+                            If you can see this message, your browser does not support canvas 
+                            and needs an update. Sorry. :(
+                        </canvas>
+                    </div>
+                </div><div class="grid-item grid-item--top-games">
+                    <div class="top-games__cnt">
+                        <div class="text-holder">
+                            Top Games
+                        </div>
+                        
+                        <div class="top-games__img-holder">
+                        </div>
+                    </div>
                 </div>
-
-                <button class="arrow__holder arrow__holder--right" onclick="changeImage(1), resetInterval()" >
-                    <img class="arrow__item arrow__item--right" src="img/arrow.png">
-                </button>
             </div>
-            -->
         </div>
     </div>
 

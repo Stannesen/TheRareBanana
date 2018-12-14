@@ -1,5 +1,7 @@
 .page-text {
-  margin-left: 2vw; }
+  margin-left: 2vw;
+  margin-top: 10px;
+  margin-bottom: 10px; }
 
 .image-changing {
   display: flex;
@@ -43,14 +45,13 @@
   height: 20vw;
   margin: 0.5%;
   display: inline-block;
-  background-color: #FFC300;
+  background-color: #AF8A84;
   vertical-align: middle;
   display: inline-flex;
   flex-direction: column;
   padding: 1%;
   box-sizing: border-box; }
   .grid-item--top-games {
-    background-color: hotpink;
     width: 64.3333%; }
 
 .analog-clock {
@@ -63,7 +64,7 @@
   height: 100%;
   width: 100%;
   position: relative;
-  background-image: url("../img/game-img/fallout-4.png");
+  background-image: url("../img/game-img/shadow-of-the-tomb-raider-img3.png");
   background-position: center;
   background-size: cover; }
 
