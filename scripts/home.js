@@ -1,7 +1,4 @@
-new vue({
-    el: ""
-});
-
+/*
 var pausePlayAniImg = document.getElementById("pausePlayAniImg");
 const galleryImage = document.querySelectorAll(".logo__image");
 
@@ -103,4 +100,9 @@ function detectswipe(el,func) {
         changeImage(1);
         resetInterval();
     }
-  }
+}
+*/
+function gameClick(){
+    console.log("Hei");
+    window.location.href = "../games/shadow-of-tomb-raider.html";
+}

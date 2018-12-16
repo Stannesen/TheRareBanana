@@ -45,7 +45,7 @@
   height: 20vw;
   margin: 0.5%;
   display: inline-block;
-  background-color: #AF8A84;
+  background-color: #B72910;
   vertical-align: middle;
   display: inline-flex;
   flex-direction: column;
@@ -64,7 +64,7 @@
   height: 100%;
   width: 100%;
   position: relative;
-  background-image: url("../img/game-img/shadow-of-the-tomb-raider-img3.png");
+  background-image: url("../img/game-img/shadow-of-the-tomb-raider.png");
   background-position: center;
   background-size: cover; }
 

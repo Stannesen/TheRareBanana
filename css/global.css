@@ -15,134 +15,6 @@ header {
     header h1:hover {
       cursor: pointer; }
 
-/* Dropdown Button */
-.dropbtn {
-  background-color: black;
-  color: white;
-  font-size: 16px;
-  border: none;
-  cursor: pointer; }
-
-i {
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 3px;
-  margin-left: 5px; }
-
-.down {
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg); }
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block;
-  height: 25px; }
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  min-width: inherit;
-  width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-  background-color: white;
-  padding-top: 5px; }
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    height: fit-content; }
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {
-  background-color: #ddd; }
-
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {
-  display: block; }
-
-.dropdown:hover .dropdown-content {
-  display: block; }
-
-.nav__cnt__list {
-  list-style-type: none;
-  display: inline-block;
-  border-left: 1px solid white; }
-  .nav__cnt__list a {
-    margin-left: 10px;
-    margin-right: 10px;
-    align-self: center;
-    display: block;
-    height: 25px;
-    line-height: 25px; }
-  .nav__cnt__list:last-child {
-    border-right: 1px solid white; }
-
-.mobile-menu {
-  display: none;
-  border-style: none;
-  height: 100%;
-  width: fit-content;
-  background-color: black; }
-  .mobile-menu .mobile-menu--img {
-    display: block;
-    height: 10vw;
-    width: 10vw; }
-  .mobile-menu__item {
-    display: block;
-    border-top: 1px solid white;
-    font-family: "Times New Roman", Times, serif;
-    font-style: normal;
-    font-size: 5vw;
-    text-transform: uppercase;
-    color: white;
-    text-decoration: unset;
-    padding: 14px 15px 15px; }
-
-.mobile-nav {
-  display: none;
-  background-color: black;
-  z-index: 20;
-  position: absolute;
-  width: 100%; }
-  .mobile-nav ul {
-    padding: 0vw;
-    margin: 0; }
-  .mobile-nav__list {
-    list-style-type: none; }
-    .mobile-nav__list:last-child {
-      border-bottom: 1px solid white; }
-
-.mobile-menu__innerDropdown {
-  padding: 0px 0px 0px; }
-
-.mobile-menu__innerBtn {
-  background-color: black;
-  color: white;
-  border: none;
-  width: 100%;
-  text-align: left; }
-
-.mobile-nav__innerList {
-  list-style: none;
-  display: none;
-  padding: 0px 0px 0px; }
-
-.mobile-menu__innerItem {
-  color: white;
-  text-decoration: none;
-  font-family: "Times New Roman", Times, serif;
-  font-style: normal;
-  font-size: 5vw;
-  text-transform: uppercase;
-  padding: 14px 50px 15px;
-  display: block;
-  border-top: white solid 1px; }
-
 .top-bar {
   display: block; }
 
@@ -157,7 +29,15 @@ i {
   .logo__img:hover {
     cursor: pointer; }
 
-.menu__item {
+/* Navigation */
+.nav__cnt__list {
+  list-style-type: none;
+  display: inline-block;
+  border-left: 1px solid white; }
+  .nav__cnt__list:last-child {
+    border-right: 1px solid white; }
+
+.nav__menu__item {
   font-family: "Times New Roman", Times, serif;
   font-style: normal;
   font-size: 1vw;
@@ -165,10 +45,22 @@ i {
   color: white;
   display: inline-block;
   text-decoration: unset;
-  height: 100%; }
-  .menu__item:hover {
+  height: 100%;
+  margin-left: 10px;
+  margin-right: 10px;
+  align-self: center;
+  display: block;
+  height: 25px;
+  line-height: 25px; }
+  .nav__menu__item:hover {
     text-decoration: underline;
     color: white; }
+  .nav__menu__item--btn {
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer; }
 
 .nav {
   display: inline-flex;
@@ -179,6 +71,155 @@ i {
     padding: 0;
     margin: 0;
     flex: 1; }
+
+/* Tools Menu item */
+.tools {
+  position: relative;
+  display: inline-block;
+  height: 25px; }
+  .tools:hover .tools__cnt {
+    display: block; }
+  .tools__cnt {
+    display: none;
+    position: absolute;
+    min-width: inherit;
+    width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    background-color: white;
+    padding-top: 5px; }
+  .tools__list {
+    list-style: none; }
+  .tools__converter-holder {
+    display: flex;
+    width: fit-content;
+    width: -moz-fit-content; }
+    .tools__converter-holder:hover .converter__list__holder {
+      background: hotpink;
+      display: block; }
+
+/* Tools menu */
+.tools__item {
+  margin-left: 10px;
+  margin-right: 10px;
+  align-self: center;
+  display: block;
+  height: 25px;
+  line-height: 25px;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none; }
+  .tools__item i {
+    margin-right: 25px;
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    margin-left: 5px; }
+  .tools__item:hover {
+    background-color: #ddd; }
+
+/* List of converter */
+.converter__list {
+  list-style: none; }
+  .converter__list__holder {
+    display: none;
+    position: absolute;
+    left: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); }
+  .converter__list__button {
+    background: none;
+    border: none;
+    height: 100%;
+    width: 140px;
+    text-align: left; }
+
+.converter__item {
+  background: white;
+  margin: 0;
+  width: 130px;
+  margin: 0;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  height: fit-content; }
+  .converter__item:hover {
+    background-color: #ddd; }
+
+/* Mobile Menu */
+.mobile-menu {
+  display: none;
+  border-style: none;
+  height: 100%;
+  width: fit-content;
+  background-color: black; }
+  .mobile-menu--img {
+    display: block;
+    height: 10vw;
+    width: 10vw; }
+  .mobile-menu__item {
+    display: block;
+    border-top: 1px solid white;
+    font-family: "Times New Roman", Times, serif;
+    font-style: normal;
+    font-size: 5vw;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: unset;
+    padding: 14px 15px 15px; }
+  .mobile-menu__innerDropdown {
+    padding: 0px 0px 0px; }
+  .mobile-menu__innerBtn {
+    background-color: black;
+    color: white;
+    border: none;
+    width: 100%;
+    text-align: left; }
+  .mobile-menu__innerItem {
+    color: white;
+    text-decoration: none;
+    font-family: "Times New Roman", Times, serif;
+    font-style: normal;
+    font-size: 5vw;
+    text-transform: uppercase;
+    padding: 14px 50px 15px;
+    display: block;
+    border-top: white solid 1px; }
+
+.mobile-nav {
+  display: none;
+  background-color: black;
+  z-index: 20;
+  position: absolute;
+  width: 100%; }
+  .mobile-nav ul {
+    padding: 0vw;
+    margin: 0; }
+  .mobile-nav__list {
+    list-style-type: none; }
+    .mobile-nav__list:last-child {
+      border-bottom: 1px solid white; }
+  .mobile-nav__innerList {
+    list-style: none;
+    display: none;
+    padding: 0px 0px 0px; }
+
+/* Dropdown Arrow */
+i {
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  margin-left: 5px; }
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg); }
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg); }
 
 /* FOOTER */
 footer {
