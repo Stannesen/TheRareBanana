@@ -102,6 +102,11 @@ function detectswipe(el,func) {
     }
 }
 */
+
+windows.onload = function(){
+    
+}
+
 function gameClick(){
     console.log("Hei");
     window.location.href = "../games/shadow-of-tomb-raider.html";

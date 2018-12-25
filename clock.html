@@ -18,23 +18,37 @@
                 <img class="logo__img" src="img/top-logo-test.png" onclick="logoClick()">
                 <div class="nav">
                     <div class="nav__cnt">
-                        <ul>
+                        <ul >
                             <li class="nav__cnt__list" >
-                                <a class="menu__item menu__item--current" href="index.html">Home</a>
+                                <a class="nav__menu__item" href="index.html">Home</a>
                             <li class="nav__cnt__list" >
-                                <a class="menu__item" href="about.html">about</a>
+                                <a class="nav__menu__item" href="about.html">about</a>
                             <li class="nav__cnt__list" >
-                                <a class="menu__item" href="games.html">Games</a>
+                                <a class="nav__menu__item" href="games.html">Games</a>
                             <li class="nav__cnt__list">
-                                <div class="dropdown">
-                                    <button id="dropdown__btn" onclick="myFunction()" class="dropbtn menu__item">Tools <i class="down"></i></button>
-                                    <div id="myDropdown" class="dropdown-content">
-                                        <a href="time-converter.html">Time Converter</a>
-                                        <a href="clock.html">Clock</a>
+                                <div class="tools">
+                                    <button class="nav__menu__item nav__menu__item--btn" onclick="myFunction()">Tools <i class="down"></i></button>
+                                    <div class="tools__cnt">
+                                        <ul>
+                                            <li class="tools__list">
+                                                <div class="tools__converter-holder">
+                                                    <button class="tools__item converter__list__button">Converter <i class="arrow right"></i></button>
+                                                    <div class="converter__list__holder">
+                                                        <ul class="converter__list">
+                                                            <li>
+                                                                <a class="converter__item" href="time-converter.html">Time Converter</a>
+                                                            <li>
+                                                                <a class="converter__item" href="time-converter.html">Time Converter</a>
+                                                            </li></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            <li class="tools__list">
+                                                <a class="tools__item" href="clock.html">Clock</a>
+                                            </li></li>
+                                        </ul>
                                     </div>
-                                </div>
-
-                            </li></li></li></li>
+                                </div></li></li></li></li>
                         </ul>
                     </div>
                 </div>

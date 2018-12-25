@@ -53,8 +53,6 @@ function displayTime() {
         weekNrText.innerHTML = (currentWeekNr);
     }
 
-
-
     if(s < 10){
         s = "0" + s;
     }

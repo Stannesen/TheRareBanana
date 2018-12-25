@@ -30,14 +30,14 @@ header {
     cursor: pointer; }
 
 /* Navigation */
-.nav__cnt__list {
+.nav__list {
   list-style-type: none;
   display: inline-block;
   border-left: 1px solid white; }
-  .nav__cnt__list:last-child {
+  .nav__list:last-child {
     border-right: 1px solid white; }
 
-.nav__menu__item {
+.nav__item {
   font-family: "Times New Roman", Times, serif;
   font-style: normal;
   font-size: 1vw;
@@ -52,10 +52,10 @@ header {
   display: block;
   height: 25px;
   line-height: 25px; }
-  .nav__menu__item:hover {
+  .nav__item:hover {
     text-decoration: underline;
     color: white; }
-  .nav__menu__item--btn {
+  .nav__item--btn {
     background-color: black;
     color: white;
     font-size: 16px;
