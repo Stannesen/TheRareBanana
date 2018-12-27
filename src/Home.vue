@@ -11,8 +11,10 @@
         <app-grid-item class="grid__converter">
           <app-converter></app-converter>
         </app-grid-item>
-        
-        <app-grid-item></app-grid-item>
+
+        <app-grid-item>
+          <app-time></app-time>
+        </app-grid-item>
       </div>
     </div>
   </div>

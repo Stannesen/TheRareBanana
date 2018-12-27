@@ -9,6 +9,7 @@ import Footer from './footer/Footer.vue'
 
 import Header from './header/Header.vue'
 import Clock from './clock/Clock.vue'
+import Time from './clock/Time.vue'
 import GridItem from './home/Grid-item.vue'
 
 
@@ -31,6 +32,7 @@ Vue.component('app-clock', Clock);
 Vue.component('app-footer', Footer);
 Vue.component('app-grid-item', GridItem);
 Vue.component('app-converter', Converter);
+Vue.component('app-time', Time);
 
 new Vue({
   el: '#app',
