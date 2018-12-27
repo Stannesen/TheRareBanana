@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta property="og:image" content="http://www.therarebanana.com/img/the-rare-banana-logo-test-I.png" />
+
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    -->
+
+    <script src="scripts/vue.min.js"></script>
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/home.css">
+
+    <title>Home</title>
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <button class="mobile-menu" onclick="mobileMenu()">
+                <img class="mobile-menu--img" src="img/mobile-menu-button.png">
+            </button>
+            <div class="logo">
+                <img class="logo__img" src="img/top-logo-test.png" onclick="logoClick()">
+                <div class="nav">
+                    <div class="nav__cnt">
+                        <ul >
+                            <li class="nav__list" >
+                                <a class="nav__item" href="index.html">Home</a>
+                            <li class="nav__list" >
+                                <a class="nav__item" href="about.html">about</a>
+                            <li class="nav__list" >
+                                <a class="nav__item" href="games.html">Games</a>
+                            <li class="nav__list">
+                                <div class="tools">
+                                    <button class="nav__item nav__item--btn" onclick="myFunction()">Tools <i class="down"></i></button>
+                                    <div class="tools__cnt">
+                                        <ul>
+                                            <li class="tools__list">
+                                                <div class="tools__converter-holder">
+                                                    <button class="tools__item converter__list__button">Converter <i class="arrow right"></i></button>
+                                                    <div class="converter__list__holder">
+                                                        <ul class="converter__list">
+                                                            <li>
+                                                                <a class="converter__item" href="time-converter.html">Time Converter</a>
+                                                            <li>
+                                                                <a class="converter__item" href="time-converter.html">Time Converter</a>
+                                                            </li></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            <li class="tools__list">
+                                                <a class="tools__item" href="clock.html">Clock</a>
+                                            </li></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li></li></li></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-nav" class="mobile-nav">
+            <ul>
+                <li class="mobile-nav__list"><a class="mobile-menu__item" href="index.html">Home</a>
+                    <a class="mobile-menu__item" href="about.html">about</a>
+                    <a class="mobile-menu__item" href="games.html">Games</a>
+                    <div class="mobile-menu__item mobile-menu__innerDropdown">
+                        <button class="mobile-menu__item mobile-menu__innerBtn" onclick="mobileDropdownTools()">Tools <i class="down"></i></button>
+                        <ul>
+                            <li id="mobile-menu__dropdown-cnt" class="mobile-nav__innerList">
+                                <a class="mobile-menu__innerItem" href="time-converter.html">Time Converter</a>
+                                <a class="mobile-menu__innerItem" href="clock.html">Clock</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="background">
+        <div class="main">
+            <h1 class="page-text">
+                Home
+            </h1>
+
+            <div id="grid-container" class="grid-container">
+                <div class="grid-item grid-item--clock">
+                    <div class="clock">
+                        <div class="clock__text">
+                            <div class="time__text time__text--top">
+                                Current Time
+                            </div>
+                            <div id="digitalText" class="time__text time__text--cnt">
+                            </div>
+                            <div id="currentDate" class="time__text time__text--cnt">
+                            </div>
+                            <div id="currentDay" class="time__text time__text--cnt">
+                            </div>
+                            <div id="weekNr" class="time__text time__text--cnt">
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div><div class="grid-item grid-tiem__time-converter">
+                    <div id="converter-holder" class="time-converter-holder">
+                        <h1 class="converter__text">Converter</h1>
+                        <select id="converter__choose" class="converter__choose" v-on:change="changeConverting" v-model="converter">
+                            <option value="time">Time</option>
+                            <option value="length">Length</option>
+                            <option value="mass">Mass</option>
+                            <option value="area">Area</option>
+                        </select>
+
+                        <div class="converter__holder">
+                            <div class="converter-box">
+                                <input class="converterInput" type="number" @input="onEdit(0)" v-model="fromValue"/>
+                                <select id="select__from" v-model="from" v-on:change="changeConvertingValue(0)">
+                                    <option v-for="test in testFunc()" v-bind:value="test.id">
+                                        {{test.name}}
+                                    </option>
+                                </select>
+                            </div>
+
+                            <p class="equal">=</p>
+            
+                            <div class="converter-box">
+                                <input class="converterInput" type="number" @input="onEdit(1)" v-model="convertetValue">
+                                <select id="select__to" v-model="to" v-on:change="changeConvertingValue(1)">
+                                    <option v-for="test in testFunc()" v-bind:value="test.id">
+                                        {{test.name}}
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div><div class="grid-item gird-item--analog-clock">
+                    <div class="analog-clock">
+                        <canvas id="clock" width="50" height="50">
+                            If you can see this message, your browser does not support canvas 
+                            and needs an update. Sorry. :(
+                        </canvas>
+                    </div>
+                </div><div class="grid-item grid-item--top-games">
+                    <div onclick="gameClick()" class="top-games__cnt">
+                        <div class="text-holder">
+                            Top Games
+                        </div>
+                        
+                        <div class="top-games__img-holder">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer__logo">
+            <p>Copyright &copy; 2018 The Rare Banana</p>
+        </div>
+    </footer>    
+    <script src="scripts/clock.js"></script>
+    <script src="scripts/global.js"></script>
+    <script src="scripts/converter.js"></script>
+    <script src="scripts/home.js"></script>
+</body>
+</html> 
