@@ -1,5 +1,5 @@
 function logoClick(){
-    window.location.href = "../index.html"
+    window.location.href = "index.html"
 }
 
 function mobileMenu(){

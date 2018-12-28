@@ -21,6 +21,17 @@
                     </li>
                 </ul>
             </div>
+
+            <div class="links__types">
+                <p class="links__header">Remakes</p>
+                <ul class="footer__ul">
+                    <li class="footer__list">
+                        <a class="footer__link" href="/">Vue</a>
+                    <li class="footer__list">
+                        <a class="footer__link" href="/basic/">HTML</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </template>
