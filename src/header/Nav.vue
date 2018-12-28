@@ -70,8 +70,12 @@ export default {
 
         z-index: 1000000;
 
-        padding-top: 1px;
-        padding-bottom: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
         &__ul{
             padding: 0;
