@@ -42,8 +42,6 @@ export default {
     }
 
     .logo__img{
-        color: black;
-        background: black;
         width: 400px;
         padding-top: 5px;
         //height: 100%;
@@ -51,7 +49,7 @@ export default {
     }
 
     .top-bar{
-        background: black;
+        background: lightseagreen;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -68,7 +66,7 @@ export default {
 
     /* Dropdown Arrow */
     i{
-        border: solid white;
+        border: solid black;
         border-width: 0 3px 3px 0;
         display: inline-block;
         padding: 3px;

@@ -28,7 +28,7 @@ export default {
         font-style: normal;
         font-size: 1vw;
         text-transform: uppercase;
-        color: white;
+        color: black;
         text-decoration: none;
         font-size: 20px;
 
@@ -44,7 +44,7 @@ export default {
 
     /* Dropdown Arrow */
     .arrow {
-        border: solid white;
+        border: solid black;
         border-width: 0 3px 3px 0;
         display: inline-block;
         padding: 3px;
@@ -65,10 +65,13 @@ export default {
 
 <style lang="scss" scoped>
     .nav{
-        background: #660404;
+        background: lightblue;
         height: 2vw;
 
         z-index: 1000000;
+
+        padding-top: 1px;
+        padding-bottom: 10px;
 
         &__ul{
             padding: 0;

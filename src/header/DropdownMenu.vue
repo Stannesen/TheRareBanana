@@ -42,7 +42,7 @@ export default {
 
     .dropdown__btn{
         background: none;
-        color: white;
+        color: black;
         border: none;
 
         &:hover{
