@@ -1,13 +1,9 @@
 <template>
     <div class="background">
         <div class="main">
-            <h1>About {{ age[1] }}</h1>
-            <p>Hei, i am Arne. I am a Front End developer from Norway</p>
-            <div>
-                <div>
-                    {{ age[0] }}
-                </div>
-            </div>
+            <h1>About</h1>
+
+            <a href="https://www.arnejohannesen.com/">About Me</a>   
         </div>
     </div>
 </template>
