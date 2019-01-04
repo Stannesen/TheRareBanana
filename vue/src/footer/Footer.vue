@@ -56,6 +56,7 @@
 
         &__ul{
             text-align: left;
+            padding: 0 100px;
         }
 
         &__list{
@@ -79,7 +80,7 @@
 
     .links{
         margin: 0px;
-        width: 40%;
+        width: 100%;
 
         display: flex;
 
@@ -89,9 +90,17 @@
         }
 
         &__types{
-            margin-right: 40px;
+            //margin-right: 40px;
             top: 0;
             flex: 1;
+        }
+    }
+
+    @media screen and (max-width: 1020px) {
+        .footer{
+            .footer__ul{
+                padding: 0 20px;
+            }
         }
     }
 

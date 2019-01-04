@@ -11,6 +11,8 @@
         display: flex;
         justify-content: center;
         border: 1px solid;
+        box-sizing: border-box;
+        overflow: hidden;
 
         .img{
             width: 100px;

@@ -1,6 +1,6 @@
 <template>
   <div class="background">
-    <div class="home">
+    <div class="main">
       <h1>Home</h1>
 
       <div class="grid">
@@ -31,13 +31,14 @@ export default {
 }
 </script>
 
-<style lang="scss">
+
+<style lang="scss" scoped>
   .background{
     display: flex;
     justify-content: center;
   }
 
-  .home{
+  .main{
     width: 90%;
   }
 
@@ -51,6 +52,8 @@ export default {
     margin-right: 1%;
     height: 300px;
 
+    padding: 0px 10px;
+
     &:last-child{
       margin-right: 0px;
     }
@@ -58,5 +61,13 @@ export default {
 
   .grid__converter{
     grid-column: span 2;
+  }
+  
+  @media screen and (max-width: 1020px){
+    .main{
+      .grid{
+        display: block;
+      }
+    }
   }
 </style> 

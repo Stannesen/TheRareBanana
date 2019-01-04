@@ -24,4 +24,12 @@ export default {
   .clock{
     width: 300px;
   }
+
+  @media screen and (max-width: 1020px) {
+    #app{
+      .main{
+        width: 100%;
+      }
+    }
+  }
 </style> 
