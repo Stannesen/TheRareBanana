@@ -28,6 +28,8 @@
                     <li class="footer__list">
                         <a class="footer__link" href="/">Vue</a>
                     <li class="footer__list">
+                        <a class="footer__link" href="https://www.therarebanana.net/">React</a>
+                    <li class="footer__list">
                         <a class="footer__link" href="/basic/">HTML</a>
                     </li>
                 </ul>
