@@ -24,7 +24,7 @@ const routes = [
 
 const router = new VueRouter({
   routes,
-  //mode: 'history'
+  mode: 'history'
 });
 
 Vue.component('app-header', Header);
