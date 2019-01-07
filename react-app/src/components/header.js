@@ -8,12 +8,12 @@ class header extends Component {
             <div className="header">
                 <img className="logo__img" src={'/img/top-logo.png'} alt="Can't find img"></img>
                 <div className="nav">
-                    <ul>
-                        <li>
-                            <a href="/">Home</a>
+                    <ul className="nav__ul">
+                        <li className="nav__li">
+                            <a className="nav__link" href="/">Home</a>
                         </li>
-                        <li>
-                            <a href="/game/">Game</a>
+                        <li className="nav__li">
+                            <a className="nav__link" href="/game/">Game</a>
                         </li>
                     </ul>
                 </div>

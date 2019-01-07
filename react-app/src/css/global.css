@@ -1,3 +1,45 @@
 .body__main{
     margin: 0;
 }
+
+/* Header */
+.header{
+    background: hotpink;
+}
+
+.logo__img{
+    width: 500px;
+    padding-left: 30px;
+}
+
+.nav{
+    background: purple;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nav__li{
+    list-style: none;
+    float: left;
+    font-size: 20px;
+    padding-right: 20px;
+}
+
+.nav__link{
+    color: white;
+}
+
+
+
+/* Main */
+.background{
+    display: flex;
+    justify-content: center;
+}
+
+.main{
+    width: 95%;
+    margin-top: 10px;
+    background: lightgray;
+}

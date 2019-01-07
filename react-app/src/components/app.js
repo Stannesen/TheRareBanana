@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import '../css/global.css';
 
 import Header from '../components/header.js';
-import Game from '../components/game/game.js';
+import Game from './game.js';
 import Home from '../components/home.js';
+import Footer from '../components/footer.js';
 
 const AppRouter = () => (
     <Router>
-        <div>
+        <div className="main">
             <Route path="/" exact component={Home} />
             <Route path="/game/" component={Game} />
         </div>
@@ -20,7 +21,11 @@ class app extends Component {
         return (
             <div>
                 <Header></Header>
-                <AppRouter></AppRouter>
+                <div className="background">
+                    <AppRouter></AppRouter>
+                </div>
+
+                <Footer></Footer>
             </div>
             
         );
