@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import '../css/header.css';
 
 
 class header extends Component {
@@ -11,9 +10,6 @@ class header extends Component {
                     <ul className="nav__ul">
                         <li className="nav__li">
                             <a className="nav__link" href="/">Home</a>
-                        </li>
-                        <li className="nav__li">
-                            <a className="nav__link" href="/game/">Game</a>
                         </li>
                     </ul>
                 </div>

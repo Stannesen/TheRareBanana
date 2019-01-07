@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import '../css/global.css';
+import '../css/global.scss';
 
 import Header from '../components/header.js';
-import Game from './game.js';
+import TicTacToe from './Tic-tac-toe.js';
 import Home from '../components/home.js';
 import Footer from '../components/footer.js';
 
@@ -11,7 +11,7 @@ const AppRouter = () => (
     <Router>
         <div className="main">
             <Route path="/" exact component={Home} />
-            <Route path="/game/" component={Game} />
+            <Route path="/tic-tac-toe/" component={TicTacToe} />
         </div>
     </Router>
 );
