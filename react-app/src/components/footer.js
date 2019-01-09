@@ -5,7 +5,7 @@ class footer extends Component {
     render(){
         return(
             <div className="footer">
-                <h1 className="footer__logo">The Rare Banana Copyright © 2018. All rights reserved.</h1>
+                <h1 className="footer__logo">The Rare Banana Copyright © 2018-2019x. All rights reserved.</h1>
                 <div className="links">
                     <div className="links__types">
                         <p className="links__header">Links:</p>
