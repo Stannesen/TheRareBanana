@@ -82,12 +82,27 @@ class Game extends React.Component {
     });
   }
 
+  resetGame(){
+    console.log("Hei");
+    this.jumpTo(0); 
+    
+    //this.stepNumber = 0;
+    //this.state.history = null;
+
+    console.log(this.state.history);
+
+    this.render();
+  }
+
   render() {
     const history = this.state.history;
     const current = history[this.state.stepNumber];
     const winner = calculateWinner(current.squares);
 
     const moves = history.map((step, move) => {
+      //console.log(step);
+      
+
       const desc = move ?
         'Go to move #' + move :
         'Go to game start';
@@ -115,7 +130,8 @@ class Game extends React.Component {
         </div>
         <div className="game-info">
           <div>{status}</div>
-          <ol>{moves}</ol>
+          <button onClick={() => this.resetGame()}>Reset Game</button>
+          <ol id="move-ol" >{moves}</ol>
         </div>
       </div>
     );

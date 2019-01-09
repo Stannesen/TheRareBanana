@@ -4,7 +4,7 @@
 
 /* Header */
 .header{
-    background: hotpink;
+    background: #68b6f0;
 }
 
 .logo__img{
@@ -13,7 +13,7 @@
 }
 
 .nav{
-    background: purple;
+    background: #5C708E;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -50,8 +50,9 @@
 .footer{
     width: 100%;
     height: 100%;
-    background: lightpink;
+    background: #5f6380;
     text-align: center;
+    color: white;
 
     display: flex;
     flex-direction: column;
@@ -85,11 +86,13 @@
     color: black;
     text-decoration: none;
     font-size: 15px;
+    color: white;
 }
 
 .links{
     margin: 0px;
     width: 100%;
+    color: white;
 
     display: flex;
 
@@ -102,6 +105,7 @@
         //margin-right: 40px;
         top: 0;
         flex: 1;
+        color: white;
     }
 }
 
