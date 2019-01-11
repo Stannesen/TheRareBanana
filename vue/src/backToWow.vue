@@ -25,6 +25,12 @@
         font-size: 50px;
         text-align: center;
     }
+
+    @media screen and (max-width: 1020px){
+        .backToWow{
+            font-size: 40px;
+        }
+    }
 </style>
 
 
