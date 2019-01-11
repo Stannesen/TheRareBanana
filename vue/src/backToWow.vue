@@ -39,9 +39,9 @@ export default {
     data(){
         return{
             date: new Date(),
-            countDownDate: new Date("Jan 16, 2019 23:00:00").getTime(),
+            countDownDate: new Date("Jan 17, 2019 16:00:00").getTime(),
             now: 0,
-            distance: 0
+            distance: 0,
         }
     },
     methods: {
@@ -66,6 +66,7 @@ export default {
         seconds(){
             return Math.floor((this.distance % (1000 * 60)) / 1000);
         }
+
     },
     created() {
         setInterval(() => { this.update()}, 10)
