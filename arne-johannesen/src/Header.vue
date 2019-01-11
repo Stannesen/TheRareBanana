@@ -1,6 +1,6 @@
 <template>
     <div class="header">
-        <img class="logo__img" src='./assets/top-logo.png' alt="Can't find img">
+        <h1 class="logo">Arne Johannesen</h1>
         <div class="nav">
             <ul class="nav__ul">
                 <li class="nav__li">
@@ -13,6 +13,14 @@
 
 
 <style lang="scss" scoped>
+    .logo{
+        margin: 0;
+        padding: 10px 10px;
+        color: white;
+        font-size: 40px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
     .header{
         background: #68b6f0;
     }

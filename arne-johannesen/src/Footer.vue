@@ -1,6 +1,6 @@
 <template>
     <div class="footer">
-        <h1 class="footer__logo">The Rare Banana Copyright © 2018-2019x. All rights reserved.</h1>
+        <h1 class="footer__logo">Arne Johannesen Copyright © 2018-2019. All rights reserved.</h1>
         <div class="links">
             <div class="links__types">
                 <p class="links__header">The Rare Banana Remakes</p>

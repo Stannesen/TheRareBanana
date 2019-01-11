@@ -11,6 +11,7 @@ import Header from './header/Header.vue'
 import Clock from './clock/Clock.vue'
 import Time from './clock/Time.vue'
 import GridItem from './home/Grid-item.vue'
+import backToWow from './backToWow.vue'
 
 
 Vue.use(VueRouter);
@@ -19,7 +20,8 @@ const routes = [
   { path: '/clock', component: Clock },
   { path: '/', component: Home },
   {path: '/converter', component: Converter},
-  {path: '/about', component: About}
+  {path: '/about', component: About},
+  {path: '/backtowow', component: backToWow}
 ]
 
 const router = new VueRouter({
