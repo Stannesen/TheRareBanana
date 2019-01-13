@@ -11,8 +11,8 @@
             <div class="converter-box">
                 <input class="converterInput" type="number" @input="onEdit(0)" v-model="fromValue"/>
                 <select id="select__from" v-model="from" v-on:change="changeConvertingValue(0)">
-                    <option v-for="test in testFunc()" v-bind:value="test.id" :key="test.id">
-                        {{test.name}}
+                    <option v-for="converterOption in converterOptionFunc()" v-bind:value="converterOption.id" :key="converterOption.id">
+                        {{converterOption.name}}
                     </option>
                 </select> 
             </div>
@@ -22,8 +22,8 @@
             <div class="converter-box">
                 <input class="converterInput" type="number" @input="onEdit(1)" v-model="convertetValue">
                 <select id="select__to" v-model="to" v-on:change="changeConvertingValue(1)">
-                    <option v-for="test in testFunc()" v-bind:value="test.id" :key="test.id"> 
-                        {{test.name}}
+                    <option v-for="converterOption in converterOptionFunc()" v-bind:value="converterOption.id" :key="converterOption.id"> 
+                        {{converterOption.name}}
                     </option>
                 </select>
             </div>
@@ -41,51 +41,51 @@ export default {
             converter: "time",
             from: "",
             to: "",
-            test: this.time,
+            converterOption: this.time,
             values: {
                 length: [
-                    {index: 0, name: "Kilometre", value: 0.001, id: "kilometre"},
-                    {index: 1, name: "Metre", value: 1, id: "metre"},
-                    {index: 2, name: "Centimetre", value: 100, id: "centimetre"},
-                    {index: 3, name: "Millimetre", value: 1000, id: "millimitre"},
-                    {index: 4, name: "Micrometre", value: 1e+6, id: "micrometre"},
-                    {index: 5, name: "Nanometre", value: 1e+9, id: "nanometre"},
-                    {index: 6, name: "Mile", value: 0.000621371, id: "mile"},
-                    {index: 7, name: "Yard", value: 1.094, id: "yard"},
-                    {index: 8, name: "Foot", value: 3.281, id: "foot"},
-                    {index: 9, name: "Inch", value: 39.37, id: "inch"},
-                    {index: 10, name: "Nautical Mile", value: 0.000539957, id: "nauticalMile"}
+                    {index: 0, name: "Yard", value: 1.094, id: "yard"},
+                    {index: 1, name: "Foot", value: 3.281, id: "foot"},
+                    {index: 2, name: "Inch", value: 39.37, id: "inch"},
+                    {index: 3, name: "Centimetre", value: 100, id: "centimetre"},
+                    {index: 4, name: "Millimetre", value: 1000, id: "millimitre"},
+                    {index: 5, name: "Micrometre", value: 1e+6, id: "micrometre"},
+                    {index: 6, name: "Nanometre", value: 1e+9, id: "nanometre"},
+                    {index: 7, name: "Metre", value: 1, id: "metre"},
+                    {index: 8, name: "Kilometre", value: 1000, id: "kilometre"},
+                    {index: 9, name: "Mile", value: 1609.344, id: "mile"},
+                    {index: 10, name: "Nautical Mile", value: 1852, id: "nauticalMile"}
                 ],
                 time: [
-                    {index: 0, name: "Second", value: 1, id: "second"},
-                    {index: 1, name: "Minute", value: 60, id: "minute"},
-                    {index: 2, name: "Hour", value: 3600, id: "hour"},
-                    {index: 3, name: "Day", value: 86400, id: "day"},
-                    {index: 4, name: "Nanosecond", value: 1e-9, id: "nanosecond"},
-                    {index: 5, name: "Microsecond", value: 1e-6, id: "microsecond"},
-                    {index: 6, name: "Millisecond", value: 1e-3, id: "millisecond"}
+                    {index: 0, name: "Nanosecond", value: 1e+9, id: "nanosecond"},
+                    {index: 1, name: "Microsecond", value: 1e+6, id: "microsecond"},
+                    {index: 2, name: "Millisecond", value: 1e+3, id: "millisecond"},
+                    {index: 3, name: "Second", value: 1, id: "second", modifier: "times"},
+                    {index: 4, name: "Minute", value: 60, id: "minute", modifier: 'devide'},
+                    {index: 5, name: "Hour", value: 3600, id: "hour"},
+                    {index: 6, name: "Day", value: 86400, id: "day"},
                 ],
                 mass: [
-                    {index: 0, name: "Tonne", value: 0.001, id: "tonne"},
-                    {index: 1, name: "Kilogram", value: 1, id: "kilogram"},
-                    {index: 2, name: "Gram", value: 1000, id: "gram"},
+                    {index: 0, name: "Pound", value: 2.205, id: "pound"},
+                    {index: 1, name: "Ounce", value: 35.274, id: "ounce"},
+                    {index: 2, name: "Mircogram", value: 1e+9, id: "microgram"},
                     {index: 3, name: "Milligram", value: 1e+6, id: "milligram"},
-                    {index: 4, name: "Mircogram", value: 1e+9, id: "microgram"},
-                    {index: 5, name: "Imperial Ton", value: 0.000984207, id: "imperialTon"},
-                    {index: 6, name: "US Ton", value: 0.00110231, id: "usTon"},
-                    {index: 7, name: "Stone", value: 0.157473, id: "stone"},
-                    {index: 8, name: "Pound", value: 2.205, id: "pound"},
-                    {index: 9, name: "Ounce", value: 35.274, id: "ounce"}
+                    {index: 4, name: "Gram", value: 1000, id: "gram"},
+                    {index: 5, name: "Kilogram", value: 1, id: "kilogram"},
+                    {index: 6, name: "Tonne", value: 1000, id: "tonne"},
+                    {index: 7, name: "Imperial Ton", value: 1016.047, id: "imperialTon"},
+                    {index: 8, name: "US Ton", value: 907.185, id: "usTon"},
+                    {index: 9, name: "Stone", value: 6.35, id: "stone"}
                 ],
                 area: [
-                    {index: 0, name: "Square Kilometre", value: 1e-6, id: "squareKilometre"},
-                    {index: 1, name: "Square Metre", value: 1, id: "squareMetre"},
-                    {index: 2, name: "Square Mile", value: 0.3861003861003861, id: "squareMile"},
-                    {index: 3, name: "Square Yard", value: 1.196e+6, id: "squareYard"},
-                    {index: 4, name: "Square Foot", value: 1.076e+7, id: "squareFoot"},
-                    {index: 5, name: "Square Inch", value: 1.55e+9, id: "squareInch"},
-                    {index: 6, name: "Hectare", value: 100, id: "hectare"},
-                    {index: 7, name: "Arce", value:  247.105, id: "arce"}
+                    {index: 0, name: "Square Inch", value: 1550.003, id: "squareInch"},
+                    {index: 1, name: "Square Foot", value: 10.764, id: "squareFoot"},
+                    {index: 2, name: "Square Yard", value: 1.196, id: "squareYard"},
+                    {index: 3, name: "Square Metre", value: 1, id: "squareMetre"},
+                    {index: 4, name: "Square Kilometre", value: 1e+6, id: "squareKilometre"},
+                    {index: 5, name: "Square Mile", value: 2.59e+6, id: "squareMile"},
+                    {index: 6, name: "Hectare", value: 10000, id: "hectare"},
+                    {index: 7, name: "Arce", value:  4046.856, id: "arce"}
                 ]
             }
         }
@@ -103,7 +103,7 @@ export default {
             var calcHelp = 0;
             var fromIndex = 0;
             var toIndex = 0;
-            var currentConverter = this.test;
+            var currentConverter = this.converterOption;
             
             for(var i = 0; i < currentConverter.length; i++){
                 if(currentConverter[i].id == from){
@@ -114,41 +114,45 @@ export default {
                 }
             }
 
-            calcHelp = (value * currentConverter[toIndex].value) / currentConverter[fromIndex].value;
+            if(toIndex > fromIndex){
+                calcHelp = (value / currentConverter[toIndex].value) / currentConverter[fromIndex].value;
+            }else if(toIndex < fromIndex){
+                calcHelp = (value * currentConverter[toIndex].value) * currentConverter[fromIndex].value;
+            }
             return calcHelp;
         },
         
-        testFunc: function(){
-            return this.test;
+        converterOptionFunc: function(){
+            return this.converterOption;
         },
 
         changeConverting: function(){
-            this.test = this.values[this.converter];
+            this.converterOption = this.values[this.converter];
 
-            for(var i = 0; i < this.test.length; i++){
-                if(this.test[i].value == 1){
-                    this.from = this.test[i].id;
-                    this.to = this.test[i + 1].id;
+            for(var i = 0; i < this.converterOption.length; i++){
+                if(this.converterOption[i].value == 1){
+                    this.from = this.converterOption[i].id;
+                    this.to = this.converterOption[i + 1].id;
                 }
             }
         },
 
         changeConvertingValue: function(fromToConverter){
             if(this.from == this.to){
-                for(var i = 0; i < this.test.length; i++){
-                    if(this.test[i].value == 1){
+                for(var i = 0; i < this.converterOption.length; i++){
+                    if(this.converterOption[i].value == 1){
                         if(fromToConverter == 0){
-                            if(this.test[i].id == this.to){
-                                this.to = (this.test[i + 1].id);
+                            if(this.converterOption[i].id == this.to){
+                                this.to = (this.converterOption[i + 1].id);
                             }else{
-                                this.to = this.test[i].id;
+                                this.to = this.converterOption[i].id;
                             }
                         }else if(fromToConverter == 1){
-                            if(this.test[i].id == this.from){
-                                this.from = (this.test[i + 1].id);
+                            if(this.converterOption[i].id == this.from){
+                                this.from = (this.converterOption[i + 1].id);
                                 break;
                             }else{
-                                this.from = (this.test[i].id);
+                                this.from = (this.converterOption[i].id);
                             }
                         }
                     }
@@ -172,7 +176,7 @@ export default {
     mounted(){
         this.from = "second";
         this.to = "minute";
-        this.test = this.values[this.converter]
+        this.converterOption = this.values[this.converter]
     }
 }
 </script>
@@ -195,9 +199,7 @@ export default {
 
 .converterInput{
     /* For Firefox */
-    
-        -moz-appearance:textfield;
-    
+    -moz-appearance:textfield;
 
     /* Webkit browsers like Safari and Chrome */
     &::-webkit-inner-spin-button,
