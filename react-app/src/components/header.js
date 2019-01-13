@@ -5,7 +5,7 @@ class header extends Component {
     render() {
         return (
             <div className="header">
-                <img className="logo__img" src={'/img/top-logo.png'} alt="Can't find img"></img>
+                <img className="logo__img" src={'/img/logoTest4.png'} alt="Can't find img"></img>
                 <div className="nav">
                     <ul className="nav__ul">
                         <li className="nav__li">
