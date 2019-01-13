@@ -65,7 +65,7 @@ export default {
 
 <style lang="scss" scoped>
     .nav{
-        background: lightblue;
+        background: #e6ddad;
         height: 2vw;
 
         z-index: 1000000;

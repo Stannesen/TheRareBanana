@@ -12,17 +12,6 @@
             </div>   
 
             <div class="links__types">
-                <p class="links__header" >Converters:</p>
-                <ul class="footer__ul">
-                    <li class="footer__list">
-                        <a class="footer__link" href="/converter">Time Converter</a>
-                    <li class="footer__list">
-                        <a class="footer__link" href="/ converter">Length Converter</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="links__types">
                 <p class="links__header">Remakes</p>
                 <ul class="footer__ul">
                     <li class="footer__list">

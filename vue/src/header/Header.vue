@@ -2,7 +2,7 @@
     <div class="top-bar">
         <div class="main">
             <a class="logo__btn" href="/">
-                <img class="logo__img" src="../assets/top-logo.png" alt="">
+                <img class="logo__img" src="../assets/logoTest4.png" alt="">
             </a>
             <app-nav></app-nav>
         </div>
@@ -30,7 +30,7 @@ export default {
     .logo__btn{
         background: none;
         border: none;
-        padding-left: 100px;
+        //padding-left: 100px;
         color: white;
         text-decoration: none;
         
@@ -44,10 +44,12 @@ export default {
         padding-top: 5px;
         //height: 100%;
         height: -moz-fit-content;
+        height: fit-content;
+        margin: -30px 0px;
     }
 
     .top-bar{
-        background: lightseagreen;
+        background: #e9bc20;
         display: flex;
         flex-direction: row;
         justify-content: center;
