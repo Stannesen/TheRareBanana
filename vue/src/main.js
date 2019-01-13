@@ -3,15 +3,16 @@ import App from './App.vue'
 import VueRouter from 'vue-router'
 
 import Home from './Home.vue'
-import Converter from './converter.vue'
 import About from './About.vue'
-import Footer from './footer/Footer.vue'
+import backToWow from './backToWow.vue'
 
 import Header from './header/Header.vue'
-import Clock from './clock/Clock.vue'
-import Time from './clock/Time.vue'
-import GridItem from './home/Grid-item.vue'
-import backToWow from './backToWow.vue'
+import Footer from './footer.vue'
+
+import Clock from './component/Clock.vue'
+import GridItem from './component/Grid-item.vue'
+import Time from './component/Time.vue'
+import Converter from './component/converter.vue'
 
 
 Vue.use(VueRouter);

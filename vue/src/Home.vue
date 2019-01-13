@@ -5,10 +5,12 @@
 
       <div class="grid">
         <app-grid-item>
+          <a href="/time"></a>
           <app-clock></app-clock>
         </app-grid-item>
 
         <app-grid-item class="grid__converter">
+          <h1 class="converter__text">Converter</h1>
           <app-converter></app-converter>
         </app-grid-item>
 
@@ -36,16 +38,26 @@ export default {
   .background{
     display: flex;
     justify-content: center;
+    background: lightgray;
+    padding-bottom: 10px;
   }
 
   .main{
-    width: 90%;
+    width: 100%;
+    background: white;
+    padding: 20px;
   }
 
   .grid{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
+
+    &__converter{
+      grid-column: span 2;
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   .grid-item{
@@ -60,7 +72,6 @@ export default {
   }
 
   .grid__converter{
-    grid-column: span 2;
   }
   
   @media screen and (max-width: 1020px){

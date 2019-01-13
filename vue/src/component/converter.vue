@@ -1,6 +1,5 @@
 <template>
     <div>
-        <h1 class="converter__text">Converter</h1>
         <select id="converter__choose" class="converter__choose" v-on:change="changeConverting" v-model="converter">
             <option value="time">Time</option>
             <option value="length">Length</option>

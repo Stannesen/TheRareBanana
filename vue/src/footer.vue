@@ -1,27 +1,13 @@
 <template>
     <div class="footer">
-        <h1 class="footer__logo">The Rare Banana Copyright © 2018-2019. All rights reserved.</h1>
-        <div class="links">
-            <div class="links__types">
-                <p class="links__header">Links:</p>
-                <ul class="footer__ul">
-                    <li class="footer__list">
-                        <a class="footer__link" href="/about">About</a>
-                    </li>
-                </ul> 
-            </div>   
+        <div class="footer__cnt">
+            <a href="https://www.therarebanana.com/">
+                <img class="footer__logo" src="./assets/logoTest2.png" alt="">
+            </a>
+            <h1 class="footer__copyright">Copyright © The Rare Banana 2018-2019. All rights reserved.</h1>
 
-            <div class="links__types">
-                <p class="links__header">Remakes</p>
-                <ul class="footer__ul">
-                    <li class="footer__list">
-                        <a class="footer__link" href="/">Vue</a>
-                    <li class="footer__list">
-                        <a class="footer__link" href="https://www.therarebanana.net/">React</a>
-                    <li class="footer__list">
-                        <a class="footer__link" href="/basic/">HTML</a>
-                    </li>
-                </ul>
+            <div class="info">
+                <a class="info__link" href="https://www.arnejohannesen.com">About Me</a>
             </div>
         </div>
     </div>
@@ -32,17 +18,23 @@
     .footer{
         width: 100%;
         height: 100%;
-        background: lightgray;
-        text-align: center;
+        background: white;
 
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        &__cnt{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
 
         &__logo{
+            height: 100px;
+        }
+
+        &__copyright{
             font-size: 20px;
             margin: 5px;
             padding-bottom: 10px;
+            width: 100%;
         }
 
         &__ul{
@@ -63,6 +55,29 @@
         }
     } 
 
+    .info{
+        text-align: right;
+        width: 100%;
+        padding-right: 20px;
+        margin-right: 60px;
+        border-right: solid black 1px;
+
+        
+        &__link{
+            text-align: right;
+            text-decoration: none;
+
+            &:hover{
+                text-decoration: underline;
+            }
+
+            &:last-child{
+                border-left: solid black 1px;
+                padding-left: 20px;
+            }
+        }
+    }
+
     .footer__link{
         color: black;
         text-decoration: none;
@@ -72,7 +87,7 @@
     .links{
         margin: 0px;
         width: 100%;
-
+        width: 100%;
         display: flex;
 
         &__header{
