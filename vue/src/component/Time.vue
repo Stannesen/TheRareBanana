@@ -15,21 +15,7 @@
 
 <style lang="scss" scoped>
     .info{
-        font-size: 60px;
-        margin-top: 0;
-        text-align: center;
-    }
-
-    @media screen and (max-width: 1280px){
-      .info{
-        font-size: 55px;
-      }
-    }
-
-    @media screen and (max-width: 1190px){
-      .info{
-        font-size: 50px;
-      }
+        margin: 0px;
     }
 </style>
 

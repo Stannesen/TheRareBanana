@@ -11,6 +11,7 @@
         display: flex;
         justify-content: center;
         border: 1px solid;
+        border-radius: 30px;
         box-sizing: border-box;
         overflow: hidden;
 
