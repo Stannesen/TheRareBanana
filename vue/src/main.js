@@ -20,7 +20,6 @@ Vue.use(VueRouter);
 const routes = [
   { path: '/clock', component: Clock },
   { path: '/', component: Home },
-  {path: '/converter', component: Converter},
   {path: '/about', component: About},
   {path: '/backtowow', component: backToWow}
 ]

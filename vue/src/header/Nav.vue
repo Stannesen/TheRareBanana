@@ -3,21 +3,15 @@
         <ul class="nav__ul">
             <li class="nav__list" >
                 <a class="nav__item menu__text" href="/">Home</a>
-            <li class="nav__list" >
-                <app-dropdown class="nav__item"></app-dropdown>
             </li>
         </ul>
     </div>
 </template>
 
 <script>
-import Dropdown from './DropdownMenu.vue';
 export default {
     data() {
         return { }
-    },
-    components: {
-        'app-dropdown': Dropdown
     }
 }
 </script>

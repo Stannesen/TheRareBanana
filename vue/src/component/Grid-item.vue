@@ -8,7 +8,7 @@
 <style lang="scss" scoped>
     .grid-item{
         width: 100%;
-        display: flex;
+        display: block;
         justify-content: center;
         border: 1px solid;
         border-radius: 30px;
