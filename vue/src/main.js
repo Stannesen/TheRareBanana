@@ -5,6 +5,7 @@ import VueRouter from 'vue-router'
 import Home from './Home.vue'
 import About from './About.vue'
 import backToWow from './backToWow.vue'
+import Games from './game/Games.vue'
 
 import Header from './header/Header.vue'
 import Footer from './footer.vue'
@@ -21,7 +22,8 @@ const routes = [
   { path: '/clock', component: Clock },
   { path: '/', component: Home },
   {path: '/about', component: About},
-  {path: '/backtowow', component: backToWow}
+  {path: '/backtowow', component: backToWow},
+  {path: '/games', component: Games}
 ]
 
 const router = new VueRouter({
