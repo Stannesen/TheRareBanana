@@ -42,9 +42,6 @@ export default {
     .logo__img{
         width: 400px;
         padding-top: 5px;
-        //height: 100%;
-        height: -moz-fit-content;
-        height: fit-content;
         margin: -30px 0px;
     }
 
