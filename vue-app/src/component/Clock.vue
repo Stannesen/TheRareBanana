@@ -51,10 +51,6 @@ export default {
     },
 
     methods: {
-        drawClock(){
-            var clockCanvas = this.$refs["clock"];
-            var context = this.$refs["clock"].getContext("2d");
-        },
         updateClock() {
             this.date = new Date();
             var clockCanvas = this.$refs["clock"];

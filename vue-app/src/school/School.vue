@@ -10,7 +10,7 @@
                     <div>
                         <ul class="tree"> 
                         <li>
-                            <button v-on:click="currentTab = 'task1'; changeTab();" class="task__btn task__btn--current" >Task 1</button>
+                            <button v-on:click="currentTab = 'task1';" class="task__btn task__btn--current" >Task 1</button>
 
                             <ul class="nav-task1" v-bind:class="{ active: tasksActive[0].value }">
                                 <li>
@@ -31,7 +31,7 @@
                             </ul>
                         </li>
                         <li class="last">
-                            <button v-on:click="currentTab = 'task2'; changeTab();" class="task__btn">Task 2</button>
+                            <button v-on:click="currentTab = 'task2';" class="task__btn">Task 2</button>
                         </li>
                     </ul>
                     </div>
@@ -155,16 +155,21 @@ export default {
             ]
         }
     },
+    watch: {
+        currentTab(val) {
+            this.changeTab();
+        }
+    },
 
     methods:{
         changeTab(){
-            for(var i = 0; i < this.tasksActive.length; i++){
+            /*for(var i = 0; i < this.tasksActive.length; i++){
                 if(this.currentTab != this.tasksActive[i].text){
                     this.tasksActive[i].value = false;
                 }else if(this.currentTab === this.tasksActive[i].text){
                     this.tasksActive[i].value = true;
                 }
-            }
+            }*/
         },
 
         demo(){

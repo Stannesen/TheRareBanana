@@ -3,12 +3,9 @@
         <h1>Task 1</h1>
         <div id="demo__div">
             <p id="demo">Demo</p>
-            <p>{{ testWrite() }}</p>
-
+            <button>Run Demo</button>
             <div class="demo__console">
-                <p>
-                    
-                </p>
+                <tab-task1-demo></tab-task1-demo>
             </div>
         </div>
         <div>
@@ -164,12 +161,10 @@ export default {
     },
     
     methods:{
-        testWrite(){
-            document.write("Hey");
-        }
+
     },
     created(){
-        document.write("Hello World!");
+        
     }
 }
 </script>

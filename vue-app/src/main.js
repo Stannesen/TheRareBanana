@@ -16,9 +16,9 @@ import Time from './component/Time.vue'
 import Converter from './component/converter.vue'
 
 import task1 from './school/task1/task1.vue'
+import task1Demo from './school/task1/demo.vue'
 import task2 from './school/task2.vue'
 import task1code from './school/task1/code.vue'
-
 
 Vue.use(VueRouter);
 
@@ -43,6 +43,7 @@ Vue.component('app-converter', Converter);
 Vue.component('app-time', Time);
 
 Vue.component('tab-task1', task1);
+Vue.component('tab-task1-demo', task1Demo);
 Vue.component('tab-task2', task2);
 Vue.component('tab-task1-code', task1code);
 
