@@ -1,17 +1,35 @@
 <template>
     <div class="home__main">
         <div class="block top__img">
-            <h1 class="top__text">Front End Developer</h1>
+            <h1 class="top__text">Arne Johannesen</h1>
+        </div>
+
+        <div class="main">
+            <pre class="main__text"><h1 class="main__header">Hey!</h1>
+
+            </pre>
+            <img class="main__img" src="./assets/me.jpg" alt="">
         </div>
 
         <div class="block contact">
-            
             <div class="contact__line">
-                <h2 class="contact__item">Discord: TheRareBananaBread#4338</h2>
-                <h2 class="contact__item">Slack: <a class="contact__link" 
-                    href="https://join.slack.com/t/therarebananagroup/shared_invite/enQtNTIxMDc5MTY5OTcwLTc4YThlNWFlNzgzMzE3ODhmZTNlZTUwNDM4ZWM0YjY3OTM4YmU2MjllMmRkZjFmNmNkZjg5Y2Y1NGVjZjI3MzM">
-                    TheRareBanana <i class="arrow--right"></i></a></h2>
-                <h2 class="contact__item">Mail: arne.johannesen00@gmail.com</h2>
+                <div class="contact__item">
+                    <a class="contact__link" href="https://www.linkedin.com/in/arne-johannesen-954636163/">
+                        <img class="contact__img" src="./assets/linkedin.svg" alt="">
+                    </a>
+                </div>
+                
+                <div class="contact__item">
+                    <a class="contact__link" href="mailto:arne.johannesen00@gmail.com">
+                        <img class="contact__img" src="./assets/email.svg" alt="">
+                    </a>
+                </div>
+
+                <div class="contact__item">
+                    <a class="contact__link" href="https://twitter.com/ArneJohannesen4">
+                        <img class="contact__img" src="./assets/twitter.png" alt="">
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -22,6 +40,25 @@
         margin-top: 10px;
     }
 
+    .main{
+        display: flex;
+        padding: 5px 20px;
+        border-top: 10px lightcoral solid;
+
+        &__text{
+            width: 100%;
+        }
+        
+        &__header{
+            margin-top: 0px;
+            padding-top: 0px;
+        }
+        
+        &__img{
+            height: 300px;
+        }
+    }
+    
     .contact{
         width: 100%;
         height: -moz-fit-content;
@@ -31,22 +68,34 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
-
-        margin-bottom: 10px;
+        padding: 10px 0px;
 
         &__line{
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            display: flex;
+            justify-content: flex-end;
             width: 100%;
         }
 
         &__item{
-            padding-right: 20px;
-            text-align: center;
+            width: 100px;
         }
 
-        &__link{
+        &__img{
             color: white;
+            height: 70%;
+            display: block;  
+        }   
+
+        &__link{
+            border: solid 1p;
+            background: whitesmoke;
+            border-radius: 100px;
+            height: 50px;
+            width: 50px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center; 
         }
     }
 
@@ -85,6 +134,8 @@
         text-align: center;
         color: white;
         font-size: 100px;
+        font-family: fantasy;
+        text-shadow: 5px 5px 1px #FF0000;
     }
 </style>
 

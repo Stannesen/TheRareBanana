@@ -163,13 +163,13 @@ export default {
 
     methods:{
         changeTab(){
-            /*for(var i = 0; i < this.tasksActive.length; i++){
+            for(var i = 0; i < this.tasksActive.length; i++){
                 if(this.currentTab != this.tasksActive[i].text){
                     this.tasksActive[i].value = false;
                 }else if(this.currentTab === this.tasksActive[i].text){
                     this.tasksActive[i].value = true;
                 }
-            }*/
+            }
         },
 
         demo(){

@@ -1,13 +1,6 @@
 <template>
-    <div class="header">
-        <h1 class="logo">Arne Johannesen</h1>
-        <div class="nav">
-            <ul class="nav__ul">
-                <li class="nav__li">
-                    <a class="nav__link" href="/">Home</a>
-                </li>
-            </ul>
-        </div>
+    <div>
+        
     </div>
 </template>
 
