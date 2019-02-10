@@ -50,6 +50,16 @@ export default {
 
             this.day = this.days[this.now.getDay()];
             this.month = this.months[this.now.getMonth()];
+
+            if(this.minute < 10){
+                this.minute = "0" + this.minute;
+            }
+            if(this.second < 10){
+                this.second = "0" + this.second;
+            }
+            if(this.hour < 10){
+                this.hour = "0" + this.hour;
+            }
         },
         getWeekNumber(d) {
             // Copy date so don't modify original

@@ -4,6 +4,12 @@
             <h1 class="top__text">Arne Johannesen</h1>
         </div>
 
+        <div class="nav">
+            <div>
+                <button>Home</button>
+            </div>
+        </div>
+
         <div class="main">
             <pre class="main__text"><h1 class="main__header">Hey!</h1>
 
@@ -57,6 +63,11 @@
         &__img{
             height: 300px;
         }
+    }
+
+    .nav{
+        height: 100px;
+        background: lightcoral;
     }
     
     .contact{
