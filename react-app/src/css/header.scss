@@ -1,0 +1,13 @@
+.header{
+    height: 90px;
+    overflow: hidden;
+}
+
+.logo{
+
+    &__img{
+        width: 500px;
+        padding-left: 30px;
+        margin: -30px -124px;
+    }
+}
