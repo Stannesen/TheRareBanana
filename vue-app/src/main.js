@@ -20,14 +20,17 @@ import task1Demo from './school/task1/demo.vue'
 import task2 from './school/task2.vue'
 import task1code from './school/task1/code.vue'
 
-Vue.use(VueRouter);
+import DevMain from './dev/devMain.vue'
+
+Vue.use(VueRouter); 
 
 const routes = [
   { path: '/clock', component: Clock },
   { path: '/', component: Home },
-  {path: '/about', component: About},
-  {path: '/backtowow', component: backToWow},
-  { path: '/school', component: School}
+  { path: '/about', component: About},
+  { path: '/backtowow', component: backToWow},
+  { path: '/school', component: School},
+  { path: '/dev', component: DevMain}
 ]
 
 const router = new VueRouter({
@@ -41,6 +44,8 @@ Vue.component('app-footer', Footer);
 Vue.component('app-grid-item', GridItem);
 Vue.component('app-converter', Converter);
 Vue.component('app-time', Time);
+
+Vue.component('dev-main', DevMain);
 
 Vue.component('tab-task1', task1);
 Vue.component('tab-task1-demo', task1Demo);
