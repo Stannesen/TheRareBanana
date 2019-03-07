@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <h1>Hey</h1>  
+    <vue-app-Header> </vue-app-Header>
+    <h1>Hey</h1> 
+    <vue-app-Footer> </vue-app-Footer>
   </div>
 </template>
 
