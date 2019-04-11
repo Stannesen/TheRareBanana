@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <vue-app-Header> </vue-app-Header>
-    <h1>Hey</h1> 
+    <vue-app-Home></vue-app-Home>
     <vue-app-Footer> </vue-app-Footer>
   </div>
 </template>

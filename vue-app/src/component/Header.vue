@@ -6,15 +6,11 @@
 
         <div class="nav">
             <div class="nav__menu">
-                <div class="menu--item">
-                    <p class="tempText">
-                        Item 1
-                    </p>
+                <div class="menu__item">
+                    <button class="menu__button">Home</button>
                 </div>
-                <div class="menu--item">
-                    <p class="tempText">
-                        Item 2
-                    </p>
+                <div class="menu__item">
+                    <button class="menu__button">Games</button>
                 </div>
             </div>
         </div>
@@ -22,12 +18,6 @@
 </template>
 
 <style lang="scss" scoped>
-    .tempText{
-        color: hotpink;
-        padding: 0;
-        margin: 0;
-    }
-
     .Header{
         background: #ff3737;
         width: 100%;
@@ -44,13 +34,29 @@
     }
 
     .nav{
-        height: 30px;
         background: lightblue;
 
         &__menu{
             display: flex;
             flex-direction: row;
             align-content: center;
+        }
+    }
+
+    .menu{
+        &__item{
+            margin-left: 10px;
+        }
+
+        &__button{
+            background: none;
+            border: none;
+            padding-right: 20px;
+            font-size: 25px;
+
+            &:hover{
+                color: red;
+            }
         }
     }
 </style>
